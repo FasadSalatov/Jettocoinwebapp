@@ -1,0 +1,463 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+.container {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-content: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.container>img {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top:25%
+}
+
+.footerr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.svgcom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+
+}
+
+.fot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.fotlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.headerstyle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.headname {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.headavatar img {
+    /* Group 30 */
+
+width: 60px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.uname {
+    /* Your name */
+
+width: 100%;
+height: 24px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+letter-spacing: -0.02em;
+
+/* Black */
+color: #1B191B;
+margin: 0 0 5px 0;
+
+}
+
+.name {
+    /* Input */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 12px;
+gap: 10px;
+
+min-width: 250%;
+height: 31px;
+
+/* bg */
+background: #F5F5F5;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 30px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.name p {
+    
+width: 75px;
+height: 24px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+letter-spacing: 0.1em;
+
+/* Black */
+color: #1B191B;
+
+}
+
+.stylecontainer {
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-self: center;
+padding: 20px;
+gap: 18px;
+margin-top: 5%;
+width: 90%;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 20px;
+
+
+
+}
+
+.saved {
+    margin-top: 5%;
+}
+
+.saved a {
+    text-decoration: none;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.choose img {
+width: 60px;
+height: 60px;
+
+
+}
+
+.choose .activecheck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Убедитесь, что это значение выше, чем у base-img */
+}
+
+.choose .base-img {
+    display: block;
+}
+
+.choose button {
+    position: relative;
+    z-index: 100;
+    border: none;
+    background-color: transparent;
+}
+
+.activecheck {
+    position: relative;
+    z-index: 99;
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.saved {
+    /* Profile preview */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+align-self: center !important;
+justify-content: center;
+padding: 20px;
+gap: 24px;
+
+width: 80%;
+height: 88px;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 20px;
+
+}
+
+.saved button {
+    /* Primary Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 8px;
+
+width: 348px;
+height: 48px;
+
+/* Blue */
+background: #3481DC;
+border-radius: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+border: none;
+}
+
+.saved p {
+    /* Share */
+
+width: 36px;
+height: 24px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+text-align: center;
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+
+.headerss {
+
+display: flex;
+align-content: center;
+    /* Profile preview */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center !important;
+padding: 20px;
+gap: 24px;
+
+width: 90%;
+height: 103px;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 20px;
+
+}
+
+.footerr {
+    /* Profile preview */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+gap: 24px;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 20px;
+
+}
+
+.next-btn {
+    /* Primary Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 12px 16px;
+gap: 8px;
+
+width: 162px;
+height: 48px;
+
+/* Blue */
+background: #3481DC;
+border-radius: 40px;
+border:none;
+}
+
+.next-btn>p {
+    /* Share */
+
+margin: 0 auto;
+width: 34px;
+height: 24px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+text-align: center;
+
+/* White */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+}
+
+.skip-btn {
+    /* Primary Button */
+
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 8px;
+
+width: 162px;
+height: 48px;
+
+/* White */
+background: #FFFFFF;
+/* Blue */
+border: 1px solid #3481DC;
+border-radius: 40px;
+
+/* Inside auto layout */
+
+
+}
+
+.skip-btn>p {
+    /* Share */
+
+width: 32px;
+height: 24px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+text-align: center;
+
+/* Blue */
+color: #3481DC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.btn-group {
+    display: flex;
+}
+
+.margin {
+    width: 50px !important;
+}
+
+.btn-group a {
+    text-decoration: none;
+}
+
