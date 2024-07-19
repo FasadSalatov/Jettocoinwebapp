@@ -47,61 +47,71 @@ function Home() {
                     <button>Manual verification</button>
                 </div>
                 <div className='switchcontent'>
-                    <div className='tasking'>
+                <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
                     <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span className='tasksk'>
-                            <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
-                        </span>
-                    </div>
-                    <div className='tasking'>
-                        <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
                     <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
                     <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
                     <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
                     <div className='tasking'>
                         <img src={tg}></img>
-                        <span className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></span>
-                        <span>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
                             <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
                             
-                        </span>
+                        
                     </div>
+                    <div className='tasking'>
+                        <img src={tg}></img>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
+                            <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
+                            
+                        
+                    </div>
+                    <div className='tasking'>
+                        <img src={tg}></img>
+                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                            
+                            <div className='valuetask'><p>50 coins</p><button className='claimbtn'>claim</button></div>
+                            
+                        
+                    </div>
+                    
                 </div>
     
             </div>

@@ -20,7 +20,7 @@ gap: 16px;
 isolation: isolate;
 
 width: 90%;
-height: 361px;
+height: 20vh;
 
 /* White */
 background: #FFFFFF;
@@ -183,13 +183,13 @@ opacity: 1 !important;
     /* Frame 33283 */
 
 /* Auto layout */
-display: flex;
+display: flex !important;
 flex-direction: row;
 align-items: center;
+justify-content: space-evenly;
 padding: 8px;
-gap: 16px;
 
-width: 90%;
+width: 100% !important;
 height: 42px;
 
 /* stroke */
@@ -197,11 +197,6 @@ background: #EDEDED;
 border-radius: 30px;
 
 /* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
 margin-top: 5%;
 }
 
@@ -283,21 +278,14 @@ flex-grow: 0;
 
 .tasking img {
     margin-left: -5%;
-}
-
-.tasking {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
+    padding-right: 10%;
 }
 
 .valuetask {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin-left: -30%;
-    margin-right: 5%;
+    width: 30%;
+    margin-right: 10%;
 }
 
 .valuetask p {
@@ -355,7 +343,10 @@ flex-grow: 0;
     align-items: start;
     align-self: center;
     margin-left: -15%;
+
 }
+
+
 
 .tsk {
     /* Text */
@@ -365,7 +356,7 @@ height: 13px;
 font-family: 'Inter Tight';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 12px;
 line-height: 110%;
 /* or 13px */
 
