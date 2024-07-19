@@ -39,9 +39,13 @@ function Leaders() {
                 <div className='maincontent leadermain'>
                 
                 <div className='nae'>
-                <div className='switches'>
+                <div className='switchfix'>
+                    <div className='switches'>
+                        
                     <Link to='/'><button className='btn2'>Tasks</button></Link>
-                    <Link to='/leaders'><button className='btn1'>Leaders</button></Link>
+                    <button className='btn1'>Leaders</button>
+                    </div>
+
                 </div>
 
                 <div className='switchcontent'>

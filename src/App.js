@@ -1,3 +1,4 @@
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'; // Изменено с Switch на Routes
 
@@ -17,6 +18,8 @@ import './App.css';
 
 function App() {
   return (
+    <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
+        
     <>
       <Routes>
         <Route exact path="/wlc1" element={<Wlc1 />} />
@@ -33,6 +36,7 @@ function App() {
         <Route path="/leaders" element={<Leaders />} />
       </Routes>
     </>
+    </TonConnectUIProvider>
   );
 }
 
