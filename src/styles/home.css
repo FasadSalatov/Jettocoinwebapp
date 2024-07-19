@@ -32,6 +32,8 @@ overflow-x: hidden;
 overflow: auto;
 -moz-scrollbars-vertical: auto;
 overflow-y: visible;
+scroll-behavior: smooth;
+scroll-snap-type: y proximity;
 
 width: 90%;
 height: 30vh;
