@@ -24,7 +24,7 @@ function Home() {
   };
 
   return (
-    <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/manifest.json">
+    <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
       <div className="container">
         <div className='headerr'>
           <div className='nae'>
