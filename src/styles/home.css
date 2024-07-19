@@ -37,6 +37,53 @@ margin-top: 5%;
 
 }
 
+.activebtn {
+    background: #b8b8b8 !important;
+}
+
+
+
+.fotcont button {
+    /* Component 1 */
+
+/* Auto layout */
+
+
+width: 33px;
+height: 32px;
+
+/* Blue */
+background: #f0f0f0;
+border-radius: 40px;
+
+/* Inside auto layout */
+
+border: none;
+}
+
+.fotcont {
+
+    /* Bottom navigation */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+padding: 0px 12px;
+width: 90%;
+height: 80px;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 100px;
+
+}
+
 .switches {
     /* Switch category */
 

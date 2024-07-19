@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import tg from '../imgs/tg.svg';
 import logofot from '../imgs/logofot.svg';
 import fotlogo from '../imgs/fotlogo.svg'
+import fotlogo2 from '../imgs/fotlogo2.svg'
+import fotlogo3 from '../imgs/fotlogo3.svg'
 function Home() {
     return (
         <div className="container">
@@ -111,7 +113,7 @@ function Home() {
                             
                         
                     </div>
-                    
+
                 </div>
     
             </div>
@@ -120,11 +122,11 @@ function Home() {
                 <div><img src={logofot}/></div>
                 <div className='fotcont'>
                     
-                    <div>
-                        <Link to='/'><button><img src={fotlogo}></img></button></Link>
-                        <Link to=''><button><img src={fotlogo}></img></button></Link>
-                        <Link to=''><button><img src={fotlogo}></img></button></Link>
-                    </div>
+                    
+                        <Link to='/'><button className='activebtn'><img src={fotlogo}></img></button></Link>
+                        <Link to=''><button><img src={fotlogo2}></img></button></Link>
+                        <Link to=''><button><img src={fotlogo3}></img></button></Link>
+                    
                 </div>
                 
             </div>
