@@ -3,6 +3,13 @@
     align-items: start !important;
 }
 
+* { 
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -23,6 +30,8 @@ gap: 16px;
 isolation: isolate;
 overflow-x: hidden;
 overflow: auto;
+-moz-scrollbars-vertical: auto;
+overflow-y: visible;
 
 width: 90%;
 height: 30vh;
@@ -1028,6 +1037,14 @@ margin-top: 5%;
     align-content: center;
 }
 
+.btnsharegroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
 
 .sharebtn {
     /* Primary Button */
