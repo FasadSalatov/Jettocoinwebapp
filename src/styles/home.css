@@ -12,6 +12,7 @@
     /* Auto layout */
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     padding: 20px;
     gap: 18px;
@@ -124,7 +125,7 @@ flex-grow: 0;
     padding: 12px;
     gap: 21px;
 
-    width: 168px;
+    width: 45%;
     height: 51px;
 
     /* Blue */
@@ -135,6 +136,10 @@ flex-grow: 0;
     flex: none;
     order: 1;
     flex-grow: 1;
+
+}
+.nae {
+    width: 100%;
 }
 
 .headbtns div p {
@@ -166,7 +171,7 @@ flex-grow: 0;
 
     border: none;
 
-    width: 168px;
+    width: 50%;
     height: 51px;
 
     /* Blue */
