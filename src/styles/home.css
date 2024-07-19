@@ -13,7 +13,7 @@
 .maincontent {
     /* Frame 33266 */
 
-
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -70,7 +70,7 @@ border: none;
 
     /* Bottom navigation */
 
-
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -171,6 +171,7 @@ flex-grow: 0;
 .miniswitch button {
     /* Category Button */
 
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -256,12 +257,11 @@ margin-top: 5%;
 }
 
 .maincontent {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    gap: 16px;
-
     width: 90%;
      /* Максимальная высота, чтобы ограничить высоту контейнера */
     overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
@@ -270,7 +270,10 @@ margin-top: 5%;
     border: 1px solid #EDEDED;
     border-radius: 20px;
 
+    flex: none;
+    order: 3;
     align-self: center;
+    flex-grow: 0;
     margin-top: 5%;
 }
 
@@ -382,7 +385,7 @@ flex-grow: 0;
 
 .claimbtn {
     /* Frame 33343 */
-
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -424,7 +427,7 @@ flex-grow: 0;
 .valuetask p {
     /* Frame 33341 */
 
-
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -987,6 +990,7 @@ flex-grow: 0;
 .refcontainer {
     /* Frame 33279 */
 
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -1075,7 +1079,7 @@ flex-grow: 0;
 .shareclaimbtn {
     /* Primary Button */
 
-
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -1126,6 +1130,7 @@ flex-grow: 0;
 .headerr {
     /* Profile preview */
     margin-top: 5%;
+    box-sizing: border-box;
 
     /* Auto layout */
     display: flex;
@@ -1160,7 +1165,7 @@ flex-grow: 0;
 
 .tasks {
  /* Frame 33281 */
-
+    box-sizing: border-box;
     margin-top: 5%;
     /* Auto layout */
     display: flex;
@@ -1244,7 +1249,7 @@ flex-grow: 0;
 .headbtns div {
     /* Frame 33262 */
 
- 
+    box-sizing: border-box;
 
     /* Auto layout */
     display: flex;
