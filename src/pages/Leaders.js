@@ -22,9 +22,6 @@ function Leaders() {
                         </span>
                     </span>
                     <span className='headbtns'>
-                        <button>
-                            <p>Connect wallet</p>
-                        </button>
                         <div>
                             <p>1 000 000 coins</p>
                         </div>
