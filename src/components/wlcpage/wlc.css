@@ -13,7 +13,6 @@
 .container>img {
     width: 100%;
     display: flex;
-    position: fixed;
     right: 0;
     left: 0;
     top:25%
@@ -81,9 +80,7 @@ height: 60px;
 
 
 /* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+
 
 }
 
@@ -107,6 +104,41 @@ margin: 0 0 5px 0;
 
 }
 
+.avatar-button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+  }
+  .avatars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .activecheck {
+    position: absolute;
+    width: 60px; /* Установите нужный размер */
+    height: 60px; /* Установите нужный размер */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none; /* Чтобы клики проходили через изображение галочки */
+  }
+  
+  .baseimg {
+    width: 60px;
+    height: 60px;
+    display: block;
+  }
+  
+  
+
 .name {
     /* Input */
 
@@ -119,7 +151,7 @@ align-items: center;
 padding: 8px 12px;
 gap: 10px;
 
-min-width: 200%;
+min-width: 100%;
 height: 31px;
 
 /* bg */
@@ -135,10 +167,11 @@ align-self: stretch;
 flex-grow: 0;
 
 }
-
-.name p {
+.name input {
     
-width: 75px;
+width: 70%;
+border: none;
+background-color: transparent;
 height: 24px;
 
 font-family: 'Inter Tight';
@@ -152,6 +185,12 @@ letter-spacing: 0.1em;
 /* Black */
 color: #1B191B;
 
+}
+
+.name input {
+    border: none !important;
+    outline: 0 !important;
+    outline-offset: 0 !important;
 }
 
 .stylecontainer {
@@ -200,11 +239,6 @@ height: 60px;
 
 }
 
-.choose .activecheck {
-    position: absolute;
-    z-index: 1; /* Убедитесь, что это значение выше, чем у base-img */
-}
-
 .choose .base-img {
     display: block;
 }
@@ -216,10 +250,6 @@ height: 60px;
     background-color: transparent;
 }
 
-.activecheck {
-    position: relative;
-    z-index: 99;
-}
 
 
 

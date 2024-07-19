@@ -116,7 +116,7 @@ function Home() {
                 <p className='refh1'>Referral link</p>
                 <span className='btnsharegroup'>
                   <button className='shareclaimbtn'><p>Copy</p></button>
-                  <button className='sharebtn'><p>Share</p></button>
+                  <Link to='https://telegram.me/share/url?url=https://t.me/FasadFinder_bot/JettoCoin'><button className='sharebtn'><p>Share</p></button></Link>
                 </span>
             </div>
 

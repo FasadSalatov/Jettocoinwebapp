@@ -60,8 +60,7 @@ function About() {
 
                 <button className='setbtn'>
                   <span>
-                    <p className='hh1set'>Change the language</p>
-                    <p className='hh2set'>English</p>
+                    <p className='hh1set'>Our website</p>
                   </span>
                   <img src={arrow}/>
                 </button>
