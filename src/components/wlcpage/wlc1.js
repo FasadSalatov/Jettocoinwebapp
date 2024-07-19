@@ -6,7 +6,7 @@ import wlcc1 from './wlc1.png'
 import arrow from './arrow.svg'
 function wlc1() {
   return (
-    <div >
+    <div>
       <Header />
       <div className='container'>
         <img src={wlcc1} alt='wlc1'></img>
