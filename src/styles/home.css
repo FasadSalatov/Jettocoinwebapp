@@ -251,6 +251,10 @@ border-radius: 30px;
 margin-top: 5%;
 }
 
+.mainheight {
+    max-height: 361px;
+}
+
 .maincontent {
     box-sizing: border-box;
     display: flex;
@@ -261,7 +265,7 @@ margin-top: 5%;
     isolation: isolate;
 
     width: 90%;
-    height: 361px; /* Максимальная высота, чтобы ограничить высоту контейнера */
+     /* Максимальная высота, чтобы ограничить высоту контейнера */
     overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
     background: #FFFFFF;

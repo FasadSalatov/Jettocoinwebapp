@@ -38,7 +38,7 @@ function Home() {
             </div>
 
 
-            <div className='maincontent'>
+            <div className='maincontent mainheight'>
                 <div className='switches'>
                     <button className='btn1'>Tasks</button>
                     <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
