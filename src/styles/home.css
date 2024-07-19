@@ -308,7 +308,7 @@ flex-grow: 0;
 .bbh2 {
     /* By inviting friends, you get 10% of their balance and 2.5% of their referrals' balance */
 
-width: 348px;
+width: 90%;
 height: 42px;
 
 font-family: 'Inter Tight';
@@ -483,7 +483,7 @@ align-items: center;
 padding: 12px 44px;
 gap: 8px;
 
-width: 160px !important;
+width: 40% !important;
 height: 48px;
 
 /* Blue */
@@ -503,7 +503,7 @@ color: white;
     display: flex;
     align-items: center;
     justify-content: space-between !important;
-
+    max-height: 5vh;
     width: 100%;
     justify-content: center;
 }
