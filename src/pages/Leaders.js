@@ -23,7 +23,7 @@ function Leaders() {
                
                 <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -31,7 +31,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -39,7 +39,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -47,7 +47,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -55,7 +55,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -63,7 +63,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -71,7 +71,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -79,7 +79,16 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                            
+                            <div className='valuetask'> <g>coins</g> <p>50</p></div>
+                            
+                        
+                    </div>
+
+                    <div className='tasking'>
+                        <img src={avatar} width='36px'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -87,7 +96,7 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
@@ -95,12 +104,21 @@ function Leaders() {
                     </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px'></img>
-                        <div className='tskk'><p className='typetask'>Manual verification</p><p className='tsk'>Subscribe on telegram</p></div>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
                             
                             <div className='valuetask'> <g>coins</g> <p>50</p></div>
                             
                         
                     </div>
+                    <div className='tasking'>
+                        <img src={avatar} width='36px'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                            
+                            <div className='valuetask'> <g>coins</g> <p>50</p></div>
+                            
+                        
+                    </div>
+                    
 
                 
     
