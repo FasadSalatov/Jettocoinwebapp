@@ -125,8 +125,9 @@ flex-grow: 0;
     padding: 12px;
     gap: 21px;
 
-    width: 45%;
+    width: 50%;
     height: 51px;
+    text-transform: none;
 
     /* Blue */
     border: 1px solid #3481DC;
