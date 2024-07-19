@@ -15,10 +15,11 @@ import Wlc7 from './components/wlcpage/wlc7';
 import Leaders from './pages/Leaders';
 import Stylesy from './components/wlcpage/stylesy'; // Correct import with PascalCase
 import './App.css';
+import manifest from './manifest.json'
 
 function App() {
   return (
-    <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/manifest.json">
         
     <>
       <Routes>
@@ -34,6 +35,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/leaders" element={<Leaders />} />
+        <Route path="/manifest" element={<manifest />} />
       </Routes>
     </>
     </TonConnectUIProvider>

@@ -1,0 +1,13 @@
+{
+    "name": "JettoCoin",
+    "description": "Jetooo",
+    "url": "https://jettocoinwebapp.vercel.app/",
+    "icons": [
+      {
+        "src": "https://jettocoinwebapp.vercel.app/path/to/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
