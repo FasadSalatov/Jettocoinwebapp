@@ -31,7 +31,7 @@ function Home() {
 
 
 
-            <div className='maincontent mainheight'>
+            <div className='maincontent'>
                 <p className='refh1'>My referrals</p>
                 <div className='switchcontent'>
                 <div className='tasking'>

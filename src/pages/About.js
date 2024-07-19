@@ -32,7 +32,7 @@ function About() {
 
 
 
-            <div className='maincontent mainheight'>
+            <div className='maincontent'>
                 
             <button className='setbtn'>
                   <span>

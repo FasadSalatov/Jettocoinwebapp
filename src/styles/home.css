@@ -91,6 +91,7 @@ justify-content: space-around;
 padding: 0px 12px;
 width: 90%;
 height: 80px;
+margin-bottom: -8%;
 
 /* White */
 background: #FFFFFF;
@@ -274,7 +275,7 @@ margin-top: 5%;
 }
 
 .mainheight {
-    min-height: 300px;
+    min-height: 270px;
 }
 
 .maincontent {
