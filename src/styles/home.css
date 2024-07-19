@@ -29,6 +29,17 @@
     /* Inside auto layout */
 }
 
+.tasks h1 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    margin-bottom: 5%;
+}
+
+.tasks p {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
 .tasks {
  /* Frame 33281 */
     box-sizing: border-box;
