@@ -21,6 +21,8 @@ align-items: flex-start;
 padding: 20px;
 gap: 16px;
 isolation: isolate;
+overflow-x: hidden;
+overflow: auto;
 
 width: 90%;
 height: 30vh;
