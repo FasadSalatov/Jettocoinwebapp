@@ -13,7 +13,6 @@
 .maincontent {
     /* Frame 33266 */
 position: relative;
-box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
@@ -33,7 +32,7 @@ border: 1px solid #EDEDED;
 border-radius: 20px;
 
 /* Inside auto layout */
-
+z-index: 10000;
 align-self: center;
 
 margin-top: 5%;
