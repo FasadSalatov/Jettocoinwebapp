@@ -267,7 +267,7 @@ margin-top: 5%;
 
     width: 90%;
      /* Максимальная высота, чтобы ограничить высоту контейнера */
-    overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+    overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
     background: #FFFFFF;
     border: 1px solid #EDEDED;
@@ -331,9 +331,12 @@ flex-grow: 0;
 
 }
 
-.refh1 {
-    /* My referrals */
 
+.refh1 {
+    width: 100%;
+    /* My referrals */
+display: flex;
+flex-direction: row;
 margin: 0 auto;
 height: 36px;
 
@@ -710,8 +713,9 @@ border:none;
 
 .hh2set {
     /* English */
+display: flex;
 margin-top: -10%;
-width: 32px;
+width: 100%;
 height: 11px;
 
 font-family: 'Inter Tight';
@@ -730,7 +734,6 @@ opacity: 0.3;
 flex: none;
 order: 1;
 flex-grow: 0;
-
 }
 
 .hh1set {
@@ -775,10 +778,10 @@ flex-grow: 0;
 display: flex;
 flex-direction: row;
 align-items: center;
+align-self: center;
 padding: 8px 16px;
 gap: 8px;
-margin-top: 15%;
-width: 100%;
+
 height: 40px;
 
 /* Blue */
@@ -809,12 +812,13 @@ color: #FFFFFF;
 
 .alysil {
     /* manager@jettonwallet.com */
-margin-top: -3%;
-justify-self: center;
-margin-left: -10%;
-width: 111px;
-height: 18px;
 
+margin-left: -10%;
+width: 100%;
+margin-left: -5%;
+height: 18px;
+display: flex;
+justify-content: flex-start;
 font-family: 'Inter Tight';
 font-style: normal;
 font-weight: 500;
@@ -1016,12 +1020,14 @@ margin-top: 5%;
 
 }
 
-.btnsharegroup {
+.btnsharegroupsup {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
+
 
 .sharebtn {
     /* Primary Button */

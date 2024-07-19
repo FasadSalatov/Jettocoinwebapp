@@ -18,9 +18,9 @@ function About() {
                     <span className='headbtnsset'>
 
                         <div className='btnset '><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
+                        <div className='btnset'><p className='piset'>Friends invited</p><p className='pset'>5</p></div>
                         <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
-                        <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
-                        <div className='btnset btnbot'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
+                        <div className='btnset btnbot'><p className='piset'>Friends invited</p><p className='pset'>5</p></div>
 
 
                     </span>
@@ -43,8 +43,8 @@ function About() {
                 </button>
                 <button className='setbtn'>
                   <span>
-                    <p className='hh1set'>Change the language</p>
-                    <p className='hh2set'>English</p>
+                    <p className='hh1set'>Change the exchange</p>
+                    <p className='hh2set'>Ton Wallet</p>
                   </span>
                   <img src={arrow}/>
                 </button>
@@ -71,11 +71,13 @@ function About() {
             </div>
 
             <div className='refcontainer'>
-                <p className='refh1'>Any questions?<p className='alysil'>manager@jettonwallet.com</p></p>
+                <p className='refh1'>Any questions?</p>
                 
-                <span className='btnsharegroup'>
-                 
-                  <button className='supbtn'><p>Support</p></button>
+                
+                <span className='btnsharegroupsup'>
+                <p className='alysil'>manager@jettonwallet.com</p>
+                <button className='supbtn'><p>Support</p></button>
+                  
                 </span>
             </div>
 
