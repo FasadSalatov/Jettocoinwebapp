@@ -43,6 +43,7 @@ margin-top: 5%;
 
 .activebtn {
     background: #b8b8b8 !important;
+    border-radius: 12px;
 }
 
 
@@ -707,6 +708,254 @@ flex-grow: 1;
 border:none;
 }
 
+.hh2set {
+    /* English */
+margin-top: -10%;
+width: 32px;
+height: 11px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 110%;
+/* identical to box height, or 11px */
+
+/* Dark gray */
+color: #383438;
+
+opacity: 0.3;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.hh1set {
+    /* Change the language */
+
+height: 15px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 110%;
+/* or 15px */
+
+/* Black */
+color: #1B191B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.term {
+    width: 100%;
+}
+
+.supbtn {
+    /* Primary Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+margin-top: 15%;
+width: 100%;
+height: 40px;
+
+/* Blue */
+background: #3481DC;
+border-radius: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+border:none;
+/* Share */
+
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+text-align: center;
+
+/* White */
+color: #FFFFFF;
+
+
+}
+
+.alysil {
+    /* manager@jettonwallet.com */
+margin-top: -3%;
+justify-self: center;
+margin-left: -10%;
+width: 111px;
+height: 18px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 110%;
+/* identical to box height, or 18px */
+text-decoration-line: underline;
+
+/* Blue */
+color: #3481DC;
+}
+
+.notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.notification-text {
+    font-size: 16px;
+    color: #000;
+    margin-right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.setbtn {
+    /* task */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 12px;
+gap: 10px;
+
+width: 90%;
+height: 44px;
+
+/* bg */
+background: #F5F5F5;
+border-radius: 30px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: center;
+flex-grow: 0;
+border: none;
+}
+
+.btnset {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -3%;
+}
+
+.pset {
+    /* 15 */
+
+width: 14px;
+height: 21px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* Blue */
+color: #3481DC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.piset {
+    /* Tasks completed */
+
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* Black */
+color: #1B191B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
 .btn2 {
     /* Info */
 
@@ -737,11 +986,11 @@ box-sizing: border-box;
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 padding: 20px;
 gap: 12px;
 
-width: 388px;
+width: 90%;
 height: 136px;
 
 /* White */

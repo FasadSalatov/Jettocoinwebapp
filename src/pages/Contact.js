@@ -126,7 +126,7 @@ function Home() {
                     
                     
                         <Link to='/'><button ><img src={fotlogo}></img></button></Link>
-                        <Link to='/Contact' className='activebtn'><button><img src={fotlogo2}></img></button></Link>
+                        <Link to='/Contact' ><button className='activebtn'><img src={fotlogo2}></img></button></Link>
                         <Link to='/about'><button><img src={fotlogo3}></img></button></Link>
                     
                 </div>
