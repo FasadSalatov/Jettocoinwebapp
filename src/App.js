@@ -11,7 +11,8 @@ import Wlc4 from './components/wlcpage/wlc4';
 import Wlc5 from './components/wlcpage/wlc5';
 import Wlc6 from './components/wlcpage/wlc6';
 import Wlc7 from './components/wlcpage/wlc7';
-import Stylesy from './components/wlcpage/stylesy' // Correct import with PascalCase
+import Leaders from './pages/Leaders';
+import Stylesy from './components/wlcpage/stylesy'; // Correct import with PascalCase
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/leaders" element={<Leaders />} />
       </Routes>
     </>
   );
