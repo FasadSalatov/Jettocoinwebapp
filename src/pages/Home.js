@@ -39,14 +39,16 @@ function Home() {
 
 
             <div className='maincontent mainheight'>
-                <div className='switches'>
+                <div className='switchfix'>
+                 <div className='switches'>
                     <button className='btn1'>Tasks</button>
                     <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
-                </div>
-                <div className='miniswitch'>
+                 </div>
+                 <div className='miniswitch'>
                     <button className='minibtnactive'>All</button>
                     <button>Social acttivity</button>
                     <button>Manual verification</button>
+                 </div>
                 </div>
                 <div className='switchcontent'>
                 <div className='tasking'>

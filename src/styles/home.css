@@ -263,8 +263,18 @@ border-radius: 30px;
 margin-top: 5%;
 }
 
+.switchfix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
 .mainheight {
-    max-height: 361px;
+    min-height: 380px;
 }
 
 .maincontent {
