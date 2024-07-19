@@ -14,13 +14,13 @@ function About() {
         <div className="container">
             <div className='headerr'>
                 <div className='nae'>
-                    <p className='refh1'>Statistics</p>
+                    <p className='refh1 btntop'>Statistics</p>
                     <span className='headbtnsset'>
 
+                        <div className='btnset '><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
                         <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
                         <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
-                        <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
-                        <div className='btnset'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
+                        <div className='btnset btnbot'><p className='piset'>Tasks completed</p><p className='pset'>15</p></div>
 
 
                     </span>

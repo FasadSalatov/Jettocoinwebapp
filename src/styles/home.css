@@ -760,6 +760,14 @@ flex-grow: 0;
     width: 100%;
 }
 
+.btntop {
+    margin-top: -5%;
+}
+
+.btnbot {
+    margin-bottom: -8%;
+}
+
 .supbtn {
     /* Primary Button */
 
