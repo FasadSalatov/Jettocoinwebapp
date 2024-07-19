@@ -1333,6 +1333,18 @@ flex-grow: 0;
     gap: 10px; /* Adjust this value as needed for the desired spacing */
 }
 
+.go816652413 {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 12px;
+    margin-left: 20%;
+}
+.go1522830083 {
+    width: 50vw;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+}
+
 .headbtns div {
     /* Frame 33262 */
 
