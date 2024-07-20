@@ -230,6 +230,7 @@ border-radius: 20px;
 
 .saved {
     margin-top: 5%;
+    height: 5vh !important;
 }
 
 .saved a {
