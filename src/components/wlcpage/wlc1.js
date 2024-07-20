@@ -25,7 +25,7 @@ function Wlc1() {
 
   const handleSwipeLeft = () => {
     if (currentIndex === images.length - 1) {
-      navigate('/'); // Redirect to main page
+      navigate('/stylesy'); // Redirect to main page
     } else {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }
