@@ -719,31 +719,52 @@ border:none;
     min-height: 270px;
 }
 
+.go3974562317 {
+    width: 100% !important;
+    margin-right: -15%;
+}
+
 .ton-btn {
     /* Frame 33261 */
 
 /* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px;
-gap: 21px;
-margin-left: 1%;
-margin-right: 3%;
+display: flex !important;
+flex-direction: row !important;
+justify-content: center !important;
+align-items: center !important;
+padding: 12px !important;
+gap: 21px !important;
+margin-left: 1% !important;
+margin-right: 3% !important;
 
-width: 40% !important;
+width: 75% !important;
 height: 51px;
 
 /* Blue */
-background: #3481DC;
 border-radius: 100px;
+border: none !important;
 
 }
 
-.headbtns button {
-    width: 100% !important;
+.coins {
+    margin-left: -35%;
+    width: 45% !important;
+}
+
+.go1487791704 {
+    margin-left: 5px !important;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.ton-btn div {
+    border: none !important;
+    margin-left: -25%;
     
+}
+
+.headbtns button {
+    width: 80% !important;
 }
 
 .btn2 {

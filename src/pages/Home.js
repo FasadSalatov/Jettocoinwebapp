@@ -39,7 +39,7 @@ function Home() {
             </span>
             <span className='headbtns'>
               <TonConnectButton className="ton-btn" />
-              <div>
+              <div className='coins'>
                 <p>1 000 000 coins</p>
               </div>
             </span>
