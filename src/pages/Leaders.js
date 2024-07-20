@@ -34,17 +34,17 @@ function Leaders() {
                 <p>Some text Some text Some text Some text Some text Some text</p>
             </div>
                 <div className='maincontent leadermain'>
-                
-                <div className='nae'>
                 <div className='switchfix'>
-                    <div className='switches'>
+                        <div className='switches'>
+                            
                         
-                    
-                    <Link to='/' className='linkbtn'><button className='btn2'>Tasks</button></Link>
-                    <Link><button className='btn1'>Leaders</button></Link>
-                    </div>
+                        <Link to='/' className='linkbtn'><button className='btn2'>Tasks</button></Link>
+                        <Link><button className='btn3'>Leaders</button></Link>
+                        </div>
 
-                </div>
+                    </div>
+                <div className='nae'>
+                    
 
                 <div className='switchcontent'>
                
