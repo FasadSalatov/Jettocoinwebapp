@@ -1,6 +1,7 @@
 #root {
     display: flex;
-    align-items: start !important;
+    justify-content: center;
+    align-items: center !important;
 }
 
 * { 
@@ -476,7 +477,7 @@ background: #04B900;
 /* green */
 border: 1px solid #04B900;
 border-radius: 50px;
-
+color: white;
 /* Inside auto layout */
 flex: none;
 order: 0;
