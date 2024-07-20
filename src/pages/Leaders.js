@@ -39,8 +39,9 @@ function Leaders() {
                 <div className='switchfix'>
                     <div className='switches'>
                         
-                    <Link to='/'><button className='btn2'>Tasks</button></Link>
-                    <button className='btn1'>Leaders</button>
+                    
+                    <Link to='/' className='linkbtn'><button className='btn2'>Tasks</button></Link>
+                    <Link><button className='btn1'>Leaders</button></Link>
                     </div>
 
                 </div>
