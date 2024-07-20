@@ -63,10 +63,13 @@ margin-top: 5%;
     /* Component 1 */
 
 /* Auto layout */
-
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
 
 width: 33px;
-height: 32px;
+height: 33px;
 
 /* Blue */
 background: #f0f0f0;
@@ -76,6 +79,7 @@ border-radius: 40px;
 
 border: none;
 }
+
 
 .fotcont {
 
