@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 #root {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container {
@@ -13,7 +16,6 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    margin-left: -10%;
 }
 
 .footerr {
@@ -100,6 +102,7 @@ color: #1B191B;
 margin: 0 0 5px 0;
 
 }
+
 
 .wrap {
     display: flex;
