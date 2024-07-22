@@ -10,7 +10,7 @@ import fotlogo3 from '../imgs/fotlogo3.svg';
 import Modal from '../components/modal.js';
 import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
-import useTelegramUser from '../hooks/useTelegramUser'; // Проверьте путь
+import useTelegramUser from '../hooks/useTelegramUser';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -50,11 +50,15 @@ function Home() {
     setWalletModalVisible(true);
   };
 
+  const base64UrlEncode = (str) => {
+    return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  };
+
   const handleCopyWallet = () => {
     if (wallet?.account) {
-      navigator.clipboard.writeText(wallet.account.address);
+      const encodedAddress = base64UrlEncode(wallet.account.address);
+      navigator.clipboard.writeText(encodedAddress);
       setWalletModalVisible(false);
-
     }
   };
 
@@ -107,7 +111,7 @@ function Home() {
             <span className='nameava'>
               <span className='imgheader'>
                 <img src={avatar} alt='' />
-                <p>{user ? user.username : 'Loading...'}</p> {/* Отображаем имя пользователя */}
+                <p>{user ? user.username : 'Loading...'}</p>
               </span>
               <span className='frenhead'>
                 <p>5 friends</p>
@@ -140,7 +144,7 @@ function Home() {
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
         {walletModalVisible && (
-          <div className="modal">
+          <div className="modal2">
             <div className="modal-content">
               <button onClick={handleCopyWallet}>Copy Wallet Address</button>
               <button onClick={handleDisconnectWallet}>Disconnect Wallet</button>
