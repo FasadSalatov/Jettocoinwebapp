@@ -50,6 +50,7 @@
 }
 
 .maincontent {
+    position: relative;
     /* Frame 33266 */
 
 /* Auto layout */
@@ -431,6 +432,7 @@ margin-top: 2%;
 }
 
 .switchfix {
+    position: relative;
     min-height: 44px;
     overflow: none !important;
     display: flex;
@@ -611,6 +613,7 @@ flex-grow: 0;
 }
 
 .switchcontent {
+    position: relative;
     width: 100%;
     justify-self: center;
     /* task */
@@ -641,6 +644,7 @@ flex-grow: 0;
 }
 
 .switchcontact {
+    position: relative;
     width: 100%;
     justify-self: center;
     /* task */
