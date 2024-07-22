@@ -11,6 +11,16 @@ import arrow from '../imgs/arrow.svg';
 import term from '../imgs/terms.svg';
 
 function About() {
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('manager@jettonwallet.com')
+            .then(() => {
+                alert('Email copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+    };
+
     return (
         <div className="container">
             <div className='headerr'>
@@ -74,7 +84,9 @@ function About() {
             <div className='refcontainer'>
                 <p className='refh1'>Any questions?</p>
                 <span className='btnsharegroupsup'>
-                    <a className='alysil' href="mailto:manager@jettonwallet.com">manager@jettonwallet.com</a>
+                    <button className='copy-email' onClick={handleCopyEmail}>
+                        manager@jettonwallet.com
+                    </button>
                     <Link to='https://telegram.org/support?setln=ru'>
                         <button className='supbtn'>
                             <p>Support</p>
