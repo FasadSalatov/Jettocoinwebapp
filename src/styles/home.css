@@ -324,6 +324,33 @@ border-bottom: solid #3481DC 2px !important;
 opacity: 1 !important;
 }
 
+.coinss {
+    /* Frame 33262 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px;
+gap: 21px;
+
+width: 168px;
+height: 51px;
+
+/* Blue */
+border: 1px solid #3481DC;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+}
+
 .tasking {
     /* Frame 33283 */
 

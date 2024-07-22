@@ -22,9 +22,9 @@ function Leaders() {
                         </span>
                     </span>
                     <span className='headbtns'>
-                        <div>
-                            <p>1 000 000 coins</p>
-                        </div>
+                    <div className='coinss'>
+                        <p>1 000 000 coins</p>
+                    </div>
                     </span>
                 </div>
             </div>
