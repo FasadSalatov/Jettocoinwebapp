@@ -145,9 +145,10 @@ flex-direction: row;
 align-items: center;
 padding: 4px;
 gap: 10px;
-
 width: 95%;
-height: 44px;
+min-height: 44px;
+max-height: 44px;
+
 
 /* bg */
 background: #F5F5F5;
@@ -158,7 +159,7 @@ flex: none;
 order: 0;
 align-self: center;
 flex-grow: 0;
-position: relative;
+
 
 }
 
@@ -374,6 +375,39 @@ flex-grow: 0;
 
 }
 
+.maincontentt {
+    position: relative;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 16px;
+
+overflow-x: hidden;
+width: 100%;
+ /* Максимальная высота, чтобы ограничить высоту контейнера */
+overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+
+
+/* Inside auto layout */
+
+width: 95% !important;
+height: 30vh;
+
+/* White */
+background: #FFFFFF;
+/* stroke */
+border: 1px solid #EDEDED;
+border-radius: 20px;
+
+/* Inside auto layout */
+align-self: center;
+
+margin-top: 2%;
+}
+
 .tasking {
     /* Frame 33283 */
 
@@ -384,7 +418,7 @@ align-items: center;
 justify-content: space-evenly;
 padding: 8px;
 
-width: 100% !important;
+width: 90% !important;
 height: 42px;
 
 /* stroke */
@@ -396,7 +430,8 @@ margin-top: 2%;
 }
 
 .switchfix {
-    
+    min-height: 44px;
+    overflow: none !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -483,10 +518,6 @@ margin-top: 2%;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    overflow-x: hidden;
-    width: 90%;
-     /* Максимальная высота, чтобы ограничить высоту контейнера */
-    overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
     background: #FFFFFF;
     border: 1px solid #EDEDED;
@@ -592,10 +623,16 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
-height: 42px;
-
+height: 300px;
 /* bg */
-border-radius: 30px;
+border-radius: 10px;
+
+
+overflow-x: hidden;
+width: 100%;
+ /* Максимальная высота, чтобы ограничить высоту контейнера */
+overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+
 
 /* Inside auto layout */
 flex: none;

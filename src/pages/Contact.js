@@ -63,7 +63,7 @@ function Contact() {
                 </div>
             )}
 
-            <div className='maincontent'>
+            <div className='maincontentt'>
             <div className='switchfix'>
                 <p className='refh1'>My referrals</p>
             </div>
