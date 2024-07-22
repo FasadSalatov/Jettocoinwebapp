@@ -93,6 +93,9 @@ function Home() {
   return (
     <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
       <div className="container">
+      <div className='ttt'>
+           <p>Some text Some text Some text Some text Some text Some text</p>
+        </div>
         <div className='headerr'>
           <div className='nae'>
             <span className='nameava'>
@@ -145,6 +148,8 @@ function Home() {
           </div>
         )}
 
+        
+
         <div className='maincontent mainheight pad'>
           <div className='switchfix'>
             <div className='switches'>
@@ -174,6 +179,7 @@ function Home() {
             ))}
           </div>
         </div>
+        
 
         <div className='fot'>
           <div><img src={logofot} alt='Footer Logo' /></div>
@@ -183,7 +189,9 @@ function Home() {
             <Link to='/about'><button><img src={fotlogo3} alt='About' /></button></Link>
           </div>
         </div>
+
       </div>
+      
     </TonConnectUIProvider>
   );
 }
