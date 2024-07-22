@@ -54,7 +54,6 @@ function Home() {
     if (wallet?.account) {
       navigator.clipboard.writeText(wallet.account.address);
       setWalletModalVisible(false);
-      alert('Wallet number copied!');
     }
   };
 
