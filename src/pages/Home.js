@@ -8,11 +8,15 @@ import fotlogo from '../imgs/fotlogo.svg';
 import fotlogo2 from '../imgs/fotlogo2.svg';
 import fotlogo3 from '../imgs/fotlogo3.svg';
 import Modal from '../components/modal.js';
-import { TonConnectUIProvider, TonConnectButton } from '@tonconnect/ui-react';
+import wltlogo from '../imgs/wallet.svg';
+import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
   const [taskInfo, setTaskInfo] = useState('');
+  const [walletModalVisible, setWalletModalVisible] = useState(false);
+  const [tonConnectUI] = useTonConnectUI();
+  const wallet = useTonWallet();
 
   const handleClaimClick = (info) => {
     setTaskInfo(info);
@@ -21,6 +25,44 @@ function Home() {
 
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleConnectWallet = async () => {
+    try {
+      await tonConnectUI.connectWallet();
+    } catch (error) {
+      console.error('Ошибка подключения кошелька:', error);
+    }
+  };
+
+  const handleWalletClick = () => {
+    setWalletModalVisible(true);
+  };
+
+  const handleCopyWallet = () => {
+    if (wallet?.account) {
+      navigator.clipboard.writeText(wallet.account.address);
+      setWalletModalVisible(false);
+      alert('Wallet number copied!');
+    }
+  };
+
+  const handleDisconnectWallet = async () => {
+    try {
+      await tonConnectUI.disconnect();
+      setWalletModalVisible(false);
+    } catch (error) {
+      console.error('Ошибка отключения кошелька:', error);
+    }
+  };
+
+  const maskWallet = (address) => {
+    if (!address) return '';
+    return `${address.slice(2, 5)}****${address.slice(-2)}`;
+  };
+
+  const closeWalletModal = () => {
+    setWalletModalVisible(false);
   };
 
   return (
@@ -37,14 +79,37 @@ function Home() {
                 <p>5 friends</p>
               </span>
             </span>
+            
             <span className='headbtns'>
-              <TonConnectButton className="ton-btn" />
-              <div className='coins'>
-                <p>1 000 000 coins</p>
-              </div>
+              {wallet ? (
+                <div className='wallet-container'>
+                  <button className='wallet-button' onClick={handleWalletClick}>
+                    {maskWallet(wallet.account.address)}<img src={wltlogo}></img>
+                  </button>
+                  <div className='coins'>
+                    <p>1 000 000 coins</p>
+                  </div>
+                </div>
+              ) : (
+                <button onClick={handleConnectWallet} className="ton-btn">
+                  Connect wallet
+                </button>
+              )}
             </span>
           </div>
+          
         </div>
+        <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
+
+        {walletModalVisible && (
+          <div className="modal">
+            <div className="modal-content">
+              <button onClick={handleCopyWallet}>Copy Wallet Address</button>
+              <button onClick={handleDisconnectWallet}>Disconnect Wallet</button>
+              <button onClick={closeWalletModal}>Close</button>
+            </div>
+          </div>
+        )}
 
         <div className='tasks'>
           <h1>Tasks</h1>
@@ -90,7 +155,7 @@ function Home() {
           </div>
         </div>
 
-        <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
+        
       </div>
     </TonConnectUIProvider>
   );
