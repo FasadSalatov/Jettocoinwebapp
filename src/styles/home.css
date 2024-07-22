@@ -1663,3 +1663,31 @@ flex-grow: 0;
     order: 0;
     flex-grow: 0;
 }
+
+/* styles/home.css */
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+.fade-in {
+    animation: fade-in 1s forwards;
+}
