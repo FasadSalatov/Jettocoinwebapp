@@ -10,6 +10,7 @@ import fotlogo3 from '../imgs/fotlogo3.svg';
 import Modal from '../components/modal.js';
 import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
+import useTelegramUser from '../hooks/useTelegramUser'; // Проверьте путь
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -19,6 +20,7 @@ function Home() {
   const [tasksVisible, setTasksVisible] = useState(true);
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
+  const user = useTelegramUser();
 
   useEffect(() => {
     const savedTasksVisibility = localStorage.getItem('tasksVisible');
@@ -82,12 +84,11 @@ function Home() {
   const tasks = [
     { id: 1, type: 'Social activity', description: 'Subscribe on telegram', reward: 50 },
     { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    // Добавьте другие задачи
+    { id: 3, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 4, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 5, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 6, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 7, type: 'Manual verification', description: 'Verify your email', reward: 50 },
   ];
 
   const filteredTasks = tasks.filter(task => {
@@ -98,7 +99,7 @@ function Home() {
   return (
     <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
       <div className="container">
-      <div className='ttt'>
+        <div className='ttt'>
            <p>Some text Some text Some text Some text Some text Some text</p>
         </div>
         <div className='headerr'>
@@ -106,18 +107,17 @@ function Home() {
             <span className='nameava'>
               <span className='imgheader'>
                 <img src={avatar} alt='' />
-                <p>OLEG</p>
+                <p>{user ? user.username : 'Loading...'}</p> {/* Отображаем имя пользователя */}
               </span>
               <span className='frenhead'>
                 <p>5 friends</p>
               </span>
             </span>
-            
             <span className='headbtns'>
               {wallet ? (
                 <div className='wallet-container'>
                   <button className='wallet-button' onClick={handleWalletClick}>
-                    {maskWallet(wallet.account.address)}<img src={wltlogo}></img>
+                    {maskWallet(wallet.account.address)}<img src={wltlogo} alt=''/>
                   </button>
                   <div className='coins'>
                     <p>1 000 000 coins</p>
@@ -153,8 +153,6 @@ function Home() {
           </div>
         )}
 
-        
-
         <div className='maincontent mainheight pad'>
           <div className='switchfix'>
             <div className='switches'>
@@ -184,7 +182,6 @@ function Home() {
             ))}
           </div>
         </div>
-        
 
         <div className='fot'>
           <div><img src={logofot} alt='Footer Logo' /></div>
@@ -194,9 +191,7 @@ function Home() {
             <Link to='/about'><button><img src={fotlogo3} alt='About' /></button></Link>
           </div>
         </div>
-
       </div>
-      
     </TonConnectUIProvider>
   );
 }
