@@ -388,7 +388,7 @@ gap: 16px;
 overflow-x: hidden;
 width: 100%;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
-overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
 
 /* Inside auto layout */
@@ -441,12 +441,9 @@ margin-top: 2%;
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: sticky;
     top: -25px;
     padding-top: 5%;
-    vertical-align: top;
     background-color: white;
-    z-index: 10;
 }
 
 .mainheight {
@@ -590,7 +587,7 @@ display: flex;
 flex-direction: row;
 margin: 0 auto;
 height: 36px;
-padding-bottom: 5px;
+padding-bottom: 5%;
 
 font-family: 'Inter Tight';
 font-style: normal;
@@ -633,7 +630,7 @@ border-radius: 10px;
 overflow-x: hidden;
 width: 100%;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
-overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
 
 /* Inside auto layout */
@@ -654,7 +651,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
-height: 150px;
+height: 90%;
 /* bg */
 border-radius: 10px;
 
@@ -662,7 +659,7 @@ border-radius: 10px;
 overflow-x: hidden;
 width: 100%;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
-overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
 
 /* Inside auto layout */
