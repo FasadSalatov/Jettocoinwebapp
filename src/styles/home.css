@@ -453,6 +453,14 @@ margin-top: 2%;
 .maincontent.expanded {
     height: calc(100% + 20%);
   }
+
+  .maincontent.expanded .switchcontent {
+    height: calc(240px + 65px);
+  }
+
+  .maincontent.expanded .switchcontact {
+    height: calc(90% + 20%) !important;
+  }
   
 
 .contentabout {
@@ -648,13 +656,7 @@ flex-grow: 0;
 
 }
 
-.maincontent.expanded .switchcontent {
-    height: calc(240px + 100px);
-  }
 
-  .maincontent.expanded .switchcontact {
-    height: calc(90% + 20%) !important;
-  }
   
 
 .switchcontact {
