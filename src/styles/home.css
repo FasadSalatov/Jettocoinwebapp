@@ -408,6 +408,10 @@ align-self: center;
 margin-top: 2%;
 }
 
+.leadhei {
+    height: 360px;
+}
+
 .tasking {
     /* Frame 33283 */
 
@@ -443,9 +447,6 @@ margin-top: 2%;
     vertical-align: top;
     background-color: white;
     z-index: 10;
-    padding-right: 10%;
-    padding-left: 10%;
-    margin-left: -10%;
 }
 
 .mainheight {
@@ -685,7 +686,7 @@ flex-grow: 0;
 
 .valuetask p {
     /* Frame 33341 */
-
+    white-space: nowrap;
 box-sizing: border-box;
 
 /* Auto layout */

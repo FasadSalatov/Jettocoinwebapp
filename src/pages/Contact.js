@@ -26,12 +26,15 @@ function Contact() {
         navigator.clipboard.writeText('https://t.me/FasadFinder_bot/JettoCoin')
             .then(() => {
                 setShowModal(true);
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
             });
-    }
+    };
 
     const handleCloseModal = () => {
         setShowModal(false);
-    }
+    };
 
     const handleHideTasks = () => {
         setTasksVisible(false);
