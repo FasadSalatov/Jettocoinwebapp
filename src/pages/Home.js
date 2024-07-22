@@ -124,9 +124,15 @@ function Home() {
                   </div>
                 </div>
               ) : (
-                <button onClick={handleConnectWallet} className="ton-btn">
+                <div className='wallet-container'>
+                <button onClick={handleConnectWallet} className="wallet-button">
                   Connect wallet
                 </button>
+                <div className='coins'>
+                    <p>1 000 000 coins</p>
+                  </div>
+                </div>
+                
               )}
             </span>
           </div>
