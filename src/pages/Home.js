@@ -186,6 +186,7 @@ function Home() {
                   <p>{task.reward} coins</p>
                   <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}>claim</button>
                 </div>
+                
               </div>
             ))}
           </div>

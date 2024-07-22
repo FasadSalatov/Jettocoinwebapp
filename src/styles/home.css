@@ -411,7 +411,6 @@ margin-top: 2%;
 }
 
 .tasking {
-    /* Frame 33283 */
 
 /* Auto layout */
 display: flex !important;
@@ -524,6 +523,9 @@ margin-top: 2%;
 }
 
 .maincontent {
+    -webkit-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
+-moz-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
+box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -627,7 +629,13 @@ flex-grow: 0;
     margin-left: -7% !important;
 }
 
+
+
+
 .switchcontent {
+    -webkit-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
+    -moz-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
+    box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
     width: 100%;
     justify-self: center;
     /* task */
