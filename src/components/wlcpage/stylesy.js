@@ -12,12 +12,13 @@ function Stylesy() {
   const avatars = new Array(20).fill(headavatar);
 
   useEffect(() => {
-    // Check if the Telegram Web App object is available
-    if (window.Telegram.WebApp.initDataUnsafe.user) {
+    if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user) {
       const tgUser = window.Telegram.WebApp.initDataUnsafe.user;
       const defaultUsername = tgUser.username || `${tgUser.first_name} ${tgUser.last_name || ''}`;
       setUsername(defaultUsername);
       setNickname(defaultUsername);
+    } else {
+      console.warn('Telegram WebApp object is not available');
     }
   }, []);
 
