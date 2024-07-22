@@ -612,7 +612,6 @@ flex-grow: 0;
 }
 
 .switchcontent {
-    position: relative;
     width: 100%;
     justify-self: center;
     /* task */
