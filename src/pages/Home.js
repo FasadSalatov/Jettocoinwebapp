@@ -9,7 +9,7 @@ import fotlogo2 from '../imgs/fotlogo2.svg';
 import fotlogo3 from '../imgs/fotlogo3.svg';
 import Modal from '../components/modal.js';
 import wltlogo from '../imgs/wallet.svg';
-import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
+import { TonConnectUIProvider, useTonConnectUI, useTonWallet, useTonAddress } from '@tonconnect/ui-react';
 import useTelegramUser from '../hooks/useTelegramUser';
 
 function Home() {
@@ -21,6 +21,8 @@ function Home() {
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
   const user = useTelegramUser();
+  const userFriendlyAddress = useTonAddress();
+  const rawAddress = useTonAddress(false);
 
   useEffect(() => {
     const savedTasksVisibility = localStorage.getItem('tasksVisible');
@@ -50,14 +52,9 @@ function Home() {
     setWalletModalVisible(true);
   };
 
-  const base64UrlEncode = (str) => {
-    return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-  };
-
   const handleCopyWallet = () => {
-    if (wallet?.account) {
-      const encodedAddress = base64UrlEncode(wallet.account.address);
-      navigator.clipboard.writeText(encodedAddress);
+    if (userFriendlyAddress) {
+      navigator.clipboard.writeText(userFriendlyAddress);
       setWalletModalVisible(false);
     }
   };
@@ -73,7 +70,7 @@ function Home() {
 
   const maskWallet = (address) => {
     if (!address) return '';
-    return `${address.slice(2, 5)}****${address.slice(-2)}`;
+    return `${address.slice(0, 3)}****${address.slice(-3)}`;
   };
 
   const closeWalletModal = () => {
@@ -104,7 +101,7 @@ function Home() {
     <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
       <div className="container">
         <div className='ttt'>
-           <p>Some text Some text Some text Some text Some text Some text</p>
+          <p>Some text Some text Some text Some text Some text Some text</p>
         </div>
         <div className='headerr'>
           <div className='nae'>
@@ -121,7 +118,7 @@ function Home() {
               {wallet ? (
                 <div className='wallet-container'>
                   <button className='wallet-button' onClick={handleWalletClick}>
-                    {maskWallet(wallet.account.address)}<img src={wltlogo} alt=''/>
+                    {maskWallet(userFriendlyAddress)}<img src={wltlogo} alt=''/>
                   </button>
                   <div className='coins'>
                     <p>1 000 000 coins</p>
@@ -129,18 +126,18 @@ function Home() {
                 </div>
               ) : (
                 <div className='wallet-container'>
-                <button onClick={handleConnectWallet} className="wallet-button">
-                  Connect wallet
-                </button>
-                <div className='coins'>
+                  <button onClick={handleConnectWallet} className="wallet-button">
+                    Connect wallet
+                  </button>
+                  <div className='coins'>
                     <p>1 000 000 coins</p>
                   </div>
                 </div>
-                
               )}
             </span>
           </div>
         </div>
+        
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
         {walletModalVisible && (
@@ -163,9 +160,9 @@ function Home() {
           </div>
         )}
 
-        <div className='maincontent mainheight pad'>
+        <div className={`maincontent mainheight pad ${!tasksVisible ? 'expanded' : ''}`}>
           <div className='switchfix'>
-          <div className='switches'>
+            <div className='switches'>
               <button className='btn1'>Tasks</button>
               <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
             </div>
@@ -175,8 +172,7 @@ function Home() {
               <button className={`minibtn ${filter === 'social activity' ? 'minibtnactive' : ''}`} onClick={() => setFilter('social activity')}>Social activity</button>
               <button className={`minibtn ${filter === 'manual verification' ? 'minibtnactive' : ''}`} onClick={() => setFilter('manual verification')}>Manual verification</button>
             </div>
-            </div>
-          
+          </div>
 
           <div className='switchcontent'>
             {filteredTasks.map(task => (
@@ -194,13 +190,13 @@ function Home() {
             ))}
           </div>
         </div>
-
+      
         <div className='fot'>
-          <div><img src={logofot} alt='Footer Logo' /></div>
+          <div><img src={logofot} alt='Logo' className='logofot'/></div>
           <div className='fotcont'>
-            <Link to='/'><button className='activebtn'><img src={fotlogo} alt='Home' /></button></Link>
-            <Link to='/Contact'><button><img src={fotlogo2} alt='Contact' /></button></Link>
-            <Link to='/about'><button><img src={fotlogo3} alt='About' /></button></Link>
+            <Link to='/'><button className='activebtn'><img src={fotlogo} alt='Home'></img></button></Link>
+            <Link to='/Contact'><button><img src={fotlogo2} alt='Contact'></img></button></Link>
+            <Link to='/about'><button><img src={fotlogo3} alt='About'></img></button></Link>
           </div>
         </div>
       </div>

@@ -96,14 +96,14 @@ function About() {
             </div>
 
             <div className='fot'>
-                <div><img src={logofot} alt="Footer Logo" /></div>
+                <div><img src={logofot} alt='Logo' className='logofot'/></div>
                 <div className='fotcont'>
-                    <Link to='/'><button><img src={fotlogo} alt="Home" /></button></Link>
-                    <Link to='/Contact'><button><img src={fotlogo2} alt="Contact" /></button></Link>
-                    <Link to='/about'><button className='activebtn'><img src={fotlogo3} alt="About" /></button></Link>
+                    <Link to='/'><button><img src={fotlogo} alt='Home'></img></button></Link>
+                    <Link to='/Contact' ><button><img src={fotlogo2} alt='Contact'></img></button></Link>
+                    <Link to='/about'><button  className='activebtn' ><img src={fotlogo3} alt='About'></img></button></Link>
                 </div>
             </div>
-        </div>
+            </div>
     );
 }
 

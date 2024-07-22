@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center !important;
-    overflow: hidden;
+    
     position: fixed;
 }
 
@@ -73,7 +73,7 @@ border-radius: 20px;
 align-self: center;
 box-shadow: inset 0px -41px 52.5px #FFFFFF;
 margin-top: 2%;
-
+flex-grow: 1;
 }
 
 .activebtn {
@@ -447,8 +447,13 @@ margin-top: 2%;
 }
 
 .mainheight {
-    min-height: 340px;
+    min-height: 40vh;
 }
+
+.maincontent.expanded {
+    height: calc(100% + 20%);
+  }
+  
 
 .contentabout {
     box-sizing: border-box;
@@ -643,6 +648,15 @@ flex-grow: 0;
 
 }
 
+.maincontent.expanded .switchcontent {
+    height: calc(240px + 100px);
+  }
+
+  .maincontent.expanded .switchcontact {
+    height: calc(90% + 20%) !important;
+  }
+  
+
 .switchcontact {
     position: relative;
     width: 100%;
@@ -763,8 +777,19 @@ flex-grow: 0;
 
 }
 
-.fot img {
-    margin-bottom: -8%;
+.logofot {
+     /* Автоматический отступ сверху, чтобы логотип находился внизу */
+     /* Добавьте отступы, чтобы логотип не сливался с содержимым */ /* Добавьте цвет фона, если необходимо */
+    text-align: center; /* Выравнивание по центру */
+    position: relative;
+    z-index: 102103013;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -10%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
 }
 
 .btnref {
@@ -1821,30 +1846,3 @@ flex-grow: 0;
     flex-grow: 0;
 }
 
-/* styles/home.css */
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-out {
-    animation: fade-out 1s forwards;
-}
-
-.fade-in {
-    animation: fade-in 1s forwards;
-}
