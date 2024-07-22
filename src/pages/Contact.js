@@ -66,7 +66,7 @@ function Contact() {
                 </div>
             )}
 
-            <div className='maincontent mainheight pad'>
+            <div className='maincontent'>
             <div className='switchfix'>
                 <p className='refh1'>My referrals</p>
             
