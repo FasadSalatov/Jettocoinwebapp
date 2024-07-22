@@ -441,6 +441,7 @@ margin-top: 2%;
     top: -25px;
     padding-top: 5%;
     background-color: white;
+    z-index: 10;
 }
 
 .mainheight {
@@ -622,6 +623,7 @@ padding: 0px;
 height: 300px;
 /* bg */
 border-radius: 10px;
+z-index: 10;
 
 
 overflow-x: hidden;
@@ -651,6 +653,7 @@ padding: 0px;
 height: 90%;
 /* bg */
 border-radius: 10px;
+z-index: 10;
 
 
 overflow-x: hidden;
