@@ -48,7 +48,7 @@ border-radius: 20px;
 /* Inside auto layout */
 align-self: center;
 
-margin-top: 5%;
+margin-top: 2%;
 
 }
 
@@ -309,7 +309,7 @@ background: #EDEDED;
 border-radius: 30px;
 
 /* Inside auto layout */
-margin-top: 5%;
+margin-top: 2%;
 }
 
 .pad {
@@ -357,7 +357,7 @@ margin-top: 5%;
     order: 3;
     align-self: center;
     flex-grow: 0;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .tskkk {
@@ -1159,7 +1159,7 @@ flex: none;
 order: 3;
 align-self: center;
 flex-grow: 0;
-margin-top: 5%;
+margin-top: 2%;
 
 }
 
@@ -1284,7 +1284,7 @@ flex-grow: 0;
 
 .headerr {
     /* Profile preview */
-    margin-top: 5%;
+    margin-top: 2%;
     box-sizing: border-box;
 
     /* Auto layout */
@@ -1321,7 +1321,7 @@ flex-grow: 0;
 .tasks {
  /* Frame 33281 */
     box-sizing: border-box;
-    margin-top: 5%;
+    margin-top: 2%;
     /* Auto layout */
     display: flex;
     flex-direction: column;
@@ -1407,7 +1407,7 @@ flex-grow: 0;
     margin-top: -2vh;
 }
 .headbtns {
-    margin-top: 5%;
+    margin-top: 2%;
     margin-right: -3%;
     display: flex;
     flex-direction: row;
