@@ -64,7 +64,9 @@ function Contact() {
             )}
 
             <div className='maincontent'>
+            <div className='switchfix'>
                 <p className='refh1'>My referrals</p>
+            </div>
                 <div className='switchcontent'>
                     <div className='tasking'>
                         <img src={avatar} width='36px' alt='Avatar'></img>
