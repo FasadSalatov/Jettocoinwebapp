@@ -82,6 +82,11 @@ function Home() {
   const tasks = [
     { id: 1, type: 'Social activity', description: 'Subscribe on telegram', reward: 50 },
     { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
     // Добавьте другие задачи
   ];
 
