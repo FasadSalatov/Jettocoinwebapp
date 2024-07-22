@@ -71,7 +71,7 @@ border-radius: 20px;
 
 /* Inside auto layout */
 align-self: center;
-
+box-shadow: inset 0px -41px 52.5px #FFFFFF;
 margin-top: 2%;
 
 }
@@ -432,6 +432,7 @@ margin-top: 2%;
 }
 
 .switchfix {
+    box-shadow: inset 0px -41px 52.5px #FFFFFF;
     min-height: 44px;
     overflow: none !important;
     display: flex;
@@ -625,7 +626,6 @@ height: 300px;
 /* bg */
 border-radius: 10px;
 z-index: 10;
-
 
 overflow-x: hidden;
 width: 100%;
