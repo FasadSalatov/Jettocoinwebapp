@@ -75,7 +75,7 @@ function About() {
                 
                 <span className='btnsharegroupsup'>
                 <p className='alysil'>manager@jettonwallet.com</p>
-                <button className='supbtn'><p>Support</p></button>
+                <Link to='https://telegram.org/support?setln=ru'><button className='supbtn'><p>Support</p></button></Link>
                   
                 </span>
             </div>
