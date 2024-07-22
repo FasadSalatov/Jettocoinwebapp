@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center !important;
     overflow: hidden;
-
+    position: fixed;
 }
 
 * { 
@@ -432,7 +432,6 @@ margin-top: 2%;
 }
 
 .switchfix {
-    position: relative;
     min-height: 44px;
     overflow: none !important;
     display: flex;
@@ -633,7 +632,7 @@ overflow-x: hidden;
 width: 100%;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
 overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
-
+-webkit-overflow-scrolling: auto;
 
 /* Inside auto layout */
 flex: none;
@@ -658,7 +657,7 @@ height: 90%;
 /* bg */
 border-radius: 10px;
 z-index: 10;
-
+-webkit-overflow-scrolling: auto;
 
 overflow-x: hidden;
 width: 100%;
@@ -1242,7 +1241,9 @@ a {
     text-decoration: none;
 }
 
-.alysil {
+
+
+.copy-email {
     /* manager@jettonwallet.com */
 width: 100%;
 padding-right: 5%;
@@ -1254,6 +1255,8 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 110%;
+background-color: transparent;
+border: none;
 /* identical to box height, or 18px */
 text-decoration-line: underline;
 
