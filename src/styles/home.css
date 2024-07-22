@@ -590,6 +590,7 @@ display: flex;
 flex-direction: row;
 margin: 0 auto;
 height: 36px;
+padding: 10px;
 
 font-family: 'Inter Tight';
 font-style: normal;
@@ -641,6 +642,34 @@ order: 0;
 align-self: center;
 flex-grow: 0;
 
+}
+
+.switchcontact {
+    width: 100%;
+    justify-self: center;
+    /* task */
+    box-sizing: border-box;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+height: 250px;
+/* bg */
+border-radius: 10px;
+
+
+overflow-x: hidden;
+width: 100%;
+ /* Максимальная высота, чтобы ограничить высоту контейнера */
+overflow-y: auto; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: center;
+flex-grow: 0;
 }
 
 .claimbtn {

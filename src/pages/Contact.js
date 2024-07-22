@@ -49,7 +49,7 @@ function Contact() {
                     <span className='headbtnsref'>
                         <p className='refhh1'>1 000 000 coins</p>
                         <button className='btnref'>
-                          <p>Claim</p>
+                            <p>Claim</p>
                         </button>
                     </span>
                     <p className='bbh2'>By inviting friends, you get 10% of their balance and 2.5% of their referrals' balance</p>
@@ -59,18 +59,41 @@ function Contact() {
             {tasksVisible && (
                 <div className='tasks'>
                     <h1>
-                        Tasks 
+                        Tasks
                         <button onClick={handleHideTasks} className='close-btn'>×</button>
                     </h1>
                     <p>Some text Some text Some text Some text Some text Some text</p>
                 </div>
             )}
 
-            <div className='maincontentt'>
+            <div className='maincontent mainheight pad'>
             <div className='switchfix'>
                 <p className='refh1'>My referrals</p>
-            </div>
-                <div className='switchcontent'>
+            
+                
+
+
+                <div className='switchcontact'>
+                    <div className='tasking'>
+                        <img src={avatar} width='36px' alt='Avatar'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                        <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+                    </div>
+                    <div className='tasking'>
+                        <img src={avatar} width='36px' alt='Avatar'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                        <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+                    </div>
+                    <div className='tasking'>
+                        <img src={avatar} width='36px' alt='Avatar'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                        <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+                    </div>
+                    <div className='tasking'>
+                        <img src={avatar} width='36px' alt='Avatar'></img>
+                        <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+                        <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+                    </div>
                     <div className='tasking'>
                         <img src={avatar} width='36px' alt='Avatar'></img>
                         <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
@@ -93,19 +116,23 @@ function Contact() {
                     </div>
                 </div>
             </div>
+            </div>
+
+
+
 
             <div className='refcontainer'>
                 <p className='refh1'>Referral link</p>
                 <span className='btnsharegroup'>
-                  <button className='shareclaimbtn' onClick={handleCopyClick}><p>Copy</p></button>
-                  <Link to='https://telegram.me/share/url?url=https://t.me/FasadFinder_bot/JettoCoin'>
-                    <button className='sharebtn'><p>Share</p></button>
-                  </Link>
+                    <button className='shareclaimbtn' onClick={handleCopyClick}><p>Copy</p></button>
+                    <Link to='https://telegram.me/share/url?url=https://t.me/FasadFinder_bot/JettoCoin'>
+                        <button className='sharebtn'><p>Share</p></button>
+                    </Link>
                 </span>
             </div>
 
             <div className='fot'>
-                <div><img src={logofot} alt='Logo'/></div>
+                <div><img src={logofot} alt='Logo' /></div>
                 <div className='fotcont'>
                     <Link to='/'><button ><img src={fotlogo} alt='Home'></img></button></Link>
                     <Link to='/Contact' ><button className='activebtn'><img src={fotlogo2} alt='Contact'></img></button></Link>
