@@ -155,16 +155,18 @@ function Home() {
 
         <div className='maincontent mainheight pad'>
           <div className='switchfix'>
-            <div className='switches'>
+          <div className='switches'>
               <button className='btn1'>Tasks</button>
               <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
             </div>
+
             <div className='miniswitch'>
               <button className={`minibtn ${filter === 'all' ? 'minibtnactive' : ''}`} onClick={() => setFilter('all')}>All</button>
               <button className={`minibtn ${filter === 'social activity' ? 'minibtnactive' : ''}`} onClick={() => setFilter('social activity')}>Social activity</button>
               <button className={`minibtn ${filter === 'manual verification' ? 'minibtnactive' : ''}`} onClick={() => setFilter('manual verification')}>Manual verification</button>
             </div>
-          </div>
+            </div>
+          
 
           <div className='switchcontent'>
             {filteredTasks.map(task => (
