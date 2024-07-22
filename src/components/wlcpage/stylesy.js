@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './wlc.css';
 import logo from './logo.svg';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,26 @@ import tst from './trst.png';
 
 function Stylesy() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
+  const [username, setUsername] = useState('');
+  const [nickname, setNickname] = useState('');
   const avatars = new Array(20).fill(headavatar);
+
+  useEffect(() => {
+    // Check if the Telegram Web App object is available
+    if (window.Telegram.WebApp.initDataUnsafe.user) {
+      const tgUser = window.Telegram.WebApp.initDataUnsafe.user;
+      const defaultUsername = tgUser.username || `${tgUser.first_name} ${tgUser.last_name || ''}`;
+      setUsername(defaultUsername);
+      setNickname(defaultUsername);
+    }
+  }, []);
 
   const handleAvatarClick = (index) => {
     setSelectedAvatar(index);
+  };
+
+  const handleNicknameChange = (event) => {
+    setNickname(event.target.value);
   };
 
   return (
@@ -19,8 +35,15 @@ function Stylesy() {
         <div className='headerss'>
           <div className='headavatar'><img src={headavatar} alt='' /></div>
           <div className='headname'>
-            <p className='uname'>Your name</p>
-            <div className='name'><input type='text' placeholder='Nickname' /></div>
+            <p className='uname'>{username}</p>
+            <div className='name'>
+              <input 
+                type='text' 
+                placeholder='Nickname' 
+                value={nickname} 
+                onChange={handleNicknameChange} 
+              />
+            </div>
           </div>
         </div>
       </div>
