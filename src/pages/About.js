@@ -37,7 +37,7 @@ function About() {
                 </div>
             </div>
 
-            <div className='contentabout'>
+            <div className='setings'>
                 <button className='setbtn'>
                     <span>
                         <p className='hh1set'>Change the language</p>
