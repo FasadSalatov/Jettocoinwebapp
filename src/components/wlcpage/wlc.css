@@ -8,12 +8,11 @@
 }
 
 .container {
-    display: flex;
-    margin-left: -10%;
+    width: 100vw;
 }
 
 .container>img {
-    width: 80%;
+    width: 100vw;
     display: flex;
     align-self: center;
     justify-self: center;
