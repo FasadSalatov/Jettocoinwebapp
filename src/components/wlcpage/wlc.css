@@ -9,10 +9,11 @@
 
 .container {
     display: flex;
+    margin-left: -10%;
 }
 
 .container>img {
-    width: 90%;
+    width: 80%;
     display: flex;
     align-self: center;
     justify-self: center;

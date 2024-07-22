@@ -38,6 +38,7 @@
 .header {
   margin-top: 10%;
   padding: 20px;
+  margin-left: -10%;
   color: white;
   text-align: center;
   display: flex;
