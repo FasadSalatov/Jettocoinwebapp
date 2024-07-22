@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/home.css';
 import avatar from '../components/wlcpage/headavatar.png';
 import { Link } from 'react-router-dom';
@@ -15,8 +15,17 @@ function Home() {
   const [showModal, setShowModal] = useState(false);
   const [taskInfo, setTaskInfo] = useState('');
   const [walletModalVisible, setWalletModalVisible] = useState(false);
+  const [filter, setFilter] = useState('all');
+  const [tasksVisible, setTasksVisible] = useState(true);
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
+
+  useEffect(() => {
+    const savedTasksVisibility = localStorage.getItem('tasksVisible');
+    if (savedTasksVisibility !== null) {
+      setTasksVisible(JSON.parse(savedTasksVisibility));
+    }
+  }, []);
 
   const handleClaimClick = (info) => {
     setTaskInfo(info);
@@ -65,6 +74,22 @@ function Home() {
     setWalletModalVisible(false);
   };
 
+  const handleHideTasks = () => {
+    setTasksVisible(false);
+    localStorage.setItem('tasksVisible', JSON.stringify(false));
+  };
+
+  const tasks = [
+    { id: 1, type: 'Social activity', description: 'Subscribe on telegram', reward: 50 },
+    { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    // Добавьте другие задачи
+  ];
+
+  const filteredTasks = tasks.filter(task => {
+    if (filter === 'all') return true;
+    return task.type.toLowerCase() === filter.toLowerCase();
+  });
+
   return (
     <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
       <div className="container">
@@ -97,7 +122,6 @@ function Home() {
               )}
             </span>
           </div>
-          
         </div>
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
@@ -111,10 +135,15 @@ function Home() {
           </div>
         )}
 
-        <div className='tasks'>
-          <h1>Tasks</h1>
-          <p>Some text Some text Some text Some text Some text Some text</p>
-        </div>
+        {tasksVisible && (
+          <div className='tasks'>
+            <h1>
+              Tasks 
+              <button onClick={handleHideTasks} className='close-btn'>×</button>
+            </h1>
+            <p>Some text Some text Some text Some text Some text Some text</p>
+          </div>
+        )}
 
         <div className='maincontent mainheight pad'>
           <div className='switchfix'>
@@ -123,23 +152,23 @@ function Home() {
               <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
             </div>
             <div className='miniswitch'>
-              <button className='minibtnactive'>All</button>
-              <button>Social activity</button>
-              <button>Manual verification</button>
+              <button className={`minibtn ${filter === 'all' ? 'minibtnactive' : ''}`} onClick={() => setFilter('all')}>All</button>
+              <button className={`minibtn ${filter === 'social activity' ? 'minibtnactive' : ''}`} onClick={() => setFilter('social activity')}>Social activity</button>
+              <button className={`minibtn ${filter === 'manual verification' ? 'minibtnactive' : ''}`} onClick={() => setFilter('manual verification')}>Manual verification</button>
             </div>
           </div>
 
           <div className='switchcontent'>
-            {[...Array(27)].map((_, index) => (
-              <div className='tasking' key={index}>
+            {filteredTasks.map(task => (
+              <div className='tasking' key={task.id}>
                 <img src={tg} alt='Telegram' />
                 <div className='tskk'>
-                  <p className='typetask'>Manual verification</p>
-                  <p className='tsk'>Subscribe on telegram</p>
+                  <p className='typetask'>{task.type}</p>
+                  <p className='tsk'>{task.description}</p>
                 </div>
                 <div className='valuetask'>
-                  <p>50 coins</p>
-                  <button className='claimbtn' onClick={() => handleClaimClick('Subscribe on telegram - 50 coins')}>claim</button>
+                  <p>{task.reward} coins</p>
+                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}>claim</button>
                 </div>
               </div>
             ))}
@@ -154,8 +183,6 @@ function Home() {
             <Link to='/about'><button><img src={fotlogo3} alt='About' /></button></Link>
           </div>
         </div>
-
-        
       </div>
     </TonConnectUIProvider>
   );
