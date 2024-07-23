@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center !important;
-    
+    overflow-y: none;
     position: fixed;
 }
 
@@ -409,7 +409,7 @@ margin-top: 2%;
 }
 
 .padd {
-    height: 100% !important;
+    height: 80% !important;
 }
 .headerr .nameava {
     display: flex;
