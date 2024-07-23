@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center !important;
-    overflow-y: none;
+    overflow-y: none !important;
     position: fixed;
 }
 
