@@ -140,7 +140,7 @@ function Leaders() {
         <div className='nae'>
           <span className='nameava'>
             <span className='imgheader'>
-              <img src={avatar} alt='' />
+            <Link to='/stylesy'><img src={avatar} alt='Avatar' /></Link>
               <p>{user ? user.username : ''}</p> {/* Отображаем имя пользователя */}
             </span>
             <span className='frenhead'>
