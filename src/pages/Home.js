@@ -12,6 +12,7 @@ import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet, useTonAddress } from '@tonconnect/ui-react';
 import useTelegramUser from '../hooks/useTelegramUser';
 import { useTaskContext } from '../context/TaskContext.js';
+import Stylesy from '../components/wlcpage/stylesy.js';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -176,9 +177,9 @@ function Home() {
           <div className='nae'>
             <span className='nameava'>
               <span className='imgheader'>
-                <img src={avatar} alt='Avatar' />
+              <Link to='/stylesy'><img src={avatar} alt='Avatar' /></Link>
                 <p>{username}</p>
-                <button className='edit-button' onClick={handleProfileEditClick}>✏️</button>
+                
               </span>
               <span className='frenhead'>
                 <p>5 friends</p>
