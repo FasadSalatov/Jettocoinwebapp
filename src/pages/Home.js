@@ -137,6 +137,7 @@ function Home() {
       const reader = new FileReader();
       reader.onloadend = () => {
         setAvatar(reader.result);
+        localStorage.setItem('avatar', reader.result); // Обновляем avatar в localStorage
       };
       reader.readAsDataURL(file);
     }
