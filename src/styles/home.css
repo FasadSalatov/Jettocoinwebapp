@@ -63,9 +63,9 @@
     align-items: center;
     z-index: 10; /* Убедитесь, что это выше другого контента */
     box-shadow: rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 9);
-    -moz-box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 9);
-    box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 9);
+    -webkit-box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 0.9);
+    box-shadow: 4px -20px 20px 20px rgba(255, 255, 255, 0.9);
   }
   
   
