@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import '../styles/home.css';
-import defaultAvatar from '../components/wlcpage/headavatar.png'; // Измените путь к изображению по необходимости
+import defaultAvatar from '../components/wlcpage/headavatar.png';
 import { Link } from 'react-router-dom';
 import tg from '../imgs/tg.svg';
 import fotlogo from '../imgs/fotlogo.svg';
@@ -33,15 +33,15 @@ function Home() {
     y: 0,
     config: { tension: 300, friction: 20 },
   }));
-  
+
   const scrollRef = useRef(null);
   const [isAtBottom, setIsAtBottom] = useState(false);
-  
+
   const handleScroll = (e) => {
     const scrollElement = e.target;
     const scrollTop = scrollElement.scrollTop;
     const maxScrollTop = scrollElement.scrollHeight - scrollElement.clientHeight;
-  
+
     if (scrollTop >= maxScrollTop) {
       setIsAtBottom(true);
       api.start({ y: (scrollTop - maxScrollTop) * 0.3 });
@@ -50,19 +50,19 @@ function Home() {
       api.start({ y: 0 });
     }
   };
-  
+
   const handleScrollRelease = () => {
     if (isAtBottom) {
       api.start({ y: 0 });
     }
   };
-  
+
   useEffect(() => {
     const scrollElement = scrollRef.current;
     scrollElement.addEventListener('scroll', handleScroll);
     scrollElement.addEventListener('touchend', handleScrollRelease);
     scrollElement.addEventListener('mouseup', handleScrollRelease);
-  
+
     return () => {
       scrollElement.removeEventListener('scroll', handleScroll);
       scrollElement.removeEventListener('touchend', handleScrollRelease);
@@ -137,7 +137,7 @@ function Home() {
       const reader = new FileReader();
       reader.onloadend = () => {
         setAvatar(reader.result);
-        localStorage.setItem('avatar', reader.result); // Обновляем avatar в localStorage
+        localStorage.setItem('avatar', reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -207,7 +207,7 @@ function Home() {
             </span>
           </div>
         </div>
-        
+
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
         {walletModalVisible && (
@@ -273,6 +273,10 @@ function Home() {
               </div>
             ))}
           </animated.div>
+
+          {/* Blur overlay */}
+          <div className={`blur-overlay ${showModal || walletModalVisible || profileEditModalVisible ? 'show' : 'show'}`} />
+
         </div>
         <div className='fot'>
           <div className='fotcont'>
