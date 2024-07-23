@@ -281,8 +281,8 @@ function Home() {
         </div>
         <div className='fot'>
           <div className='fotcont'>
-            <Link to='/'><button><img src={fotlogo} alt='Home'/></button></Link>
-            <Link to='/Contact'><button className='activebtn'><img src={fotlogo2} alt='Contact'/></button></Link>
+            <Link to='/'><button className='activebtn'><img src={fotlogo} alt='Home'/></button></Link>
+            <Link to='/Contact'><button ><img src={fotlogo2} alt='Contact'/></button></Link>
             <Link to='/about'><button><img src={fotlogo3} alt='About'/></button></Link>
           </div>
         </div>
