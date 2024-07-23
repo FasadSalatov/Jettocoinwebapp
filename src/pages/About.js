@@ -23,30 +23,6 @@ function About() {
 
     return (
         <div className="container">
-            <div className='headerr'>
-                <div className='nae'>
-                    <p className='refh1 btntop'>Statistics</p>
-                    <span className='headbtnsset'>
-                        <div className='btnset '>
-                            <p className='piset'>Tasks completed</p>
-                            <p className='pset'>15</p>
-                        </div>
-                        <div className='btnset'>
-                            <p className='piset'>Friends invited</p>
-                            <p className='pset'>5</p>
-                        </div>
-                        <div className='btnset'>
-                            <p className='piset'>Tasks completed</p>
-                            <p className='pset'>15</p>
-                        </div>
-                        <div className='btnset btnbot'>
-                            <p className='piset'>Friends invited</p>
-                            <p className='pset'>5</p>
-                        </div>
-                    </span>
-                </div>
-            </div>
-
             <div className='setings'>
                 <button className='setbtn'>
                     <span>
@@ -80,6 +56,31 @@ function About() {
 
                 <img src={term} className='term' alt="Terms" />
             </div>
+            <div className='headerr'>
+                <div className='nae'>
+                    <p className='refh1 btntop'>Statistics</p>
+                    <span className='headbtnsset'>
+                        <div className='btnset '>
+                            <p className='piset'>Tasks completed</p>
+                            <p className='pset'>15</p>
+                        </div>
+                        <div className='btnset'>
+                            <p className='piset'>Friends invited</p>
+                            <p className='pset'>5</p>
+                        </div>
+                        <div className='btnset'>
+                            <p className='piset'>Tasks completed</p>
+                            <p className='pset'>15</p>
+                        </div>
+                        <div className='btnset btnbot'>
+                            <p className='piset'>Friends invited</p>
+                            <p className='pset'>5</p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            
 
             <div className='refcontainer'>
                 <p className='refh1'>Any questions?</p>

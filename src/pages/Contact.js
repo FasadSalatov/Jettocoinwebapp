@@ -43,6 +43,58 @@ function Contact() {
 
     return (
         <div className="container">
+                        <div className='maincontent'>
+
+<div className='switchfix'>
+
+    <p className='refh1'>My referrals</p>
+
+
+
+    <div className='switchcontact'>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+        <div className='tasking'>
+            <img src={avatar} width='36px' alt='Avatar'></img>
+            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
+            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
+        </div>
+    </div>
+</div>
+</div>
             <div className='headerr'>
                 <div className='nae'>
                     <p className='refh1'>Available for the claim</p>
@@ -66,58 +118,7 @@ function Contact() {
                 </div>
             )}
 
-            <div className='maincontent'>
 
-                <div className='switchfix'>
-
-                    <p className='refh1'>My referrals</p>
-
-
-
-                    <div className='switchcontact'>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                        <div className='tasking'>
-                            <img src={avatar} width='36px' alt='Avatar'></img>
-                            <div className='tskk'><p className='typetask'></p><p className='tskkk'>OLEG</p></div>
-                            <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
 
