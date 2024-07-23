@@ -61,7 +61,7 @@ function Stylesy() {
         <Link to='/'><button><p>Save</p></button></Link>
       </div>
       <div className='fotlogo'>
-        <img src={logo} alt='logo'></img>
+        
       </div>
     </div>
   );
