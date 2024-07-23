@@ -9,9 +9,11 @@ import Wlc1 from './components/wlcpage/wlc1';
 import Leaders from './pages/Leaders';
 import Stylesy from './components/wlcpage/stylesy'; // Correct import with PascalCase
 import './App.css';
+import { TaskProvider } from './context/TaskContext';
 
 function App() {
-  return (
+return (
+  <TaskProvider>
     <TonConnectUIProvider manifestUrl="https://jettocoinwebapp.vercel.app/tonconnect-manifest.json">
         
     <>
@@ -26,6 +28,7 @@ function App() {
       </Routes>
     </>
     </TonConnectUIProvider>
+    </TaskProvider>
   );
 }
 

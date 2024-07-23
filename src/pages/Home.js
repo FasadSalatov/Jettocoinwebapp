@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useSpring, animated } from '@react-spring/web';
 import '../styles/home.css';
-import avatar from '../components/wlcpage/headavatar.png';
+import defaultAvatar from '../components/wlcpage/headavatar.png'; // Измените путь к изображению по необходимости
 import { Link } from 'react-router-dom';
 import tg from '../imgs/tg.svg';
-import logofot from '../imgs/logofot.svg';
 import fotlogo from '../imgs/fotlogo.svg';
 import fotlogo2 from '../imgs/fotlogo2.svg';
 import fotlogo3 from '../imgs/fotlogo3.svg';
@@ -11,25 +11,75 @@ import Modal from '../components/modal.js';
 import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet, useTonAddress } from '@tonconnect/ui-react';
 import useTelegramUser from '../hooks/useTelegramUser';
+import { useTaskContext } from '../context/TaskContext.js';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
   const [taskInfo, setTaskInfo] = useState('');
   const [walletModalVisible, setWalletModalVisible] = useState(false);
   const [filter, setFilter] = useState('all');
-  const [tasksVisible, setTasksVisible] = useState(true);
+  const [profileEditModalVisible, setProfileEditModalVisible] = useState(false);
+  const { tasksVisible, handleHideTasks } = useTaskContext();
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
   const user = useTelegramUser();
   const userFriendlyAddress = useTonAddress();
   const rawAddress = useTonAddress(false);
 
-  useEffect(() => {
-    const savedTasksVisibility = localStorage.getItem('tasksVisible');
-    if (savedTasksVisibility !== null) {
-      setTasksVisible(JSON.parse(savedTasksVisibility));
+  const [username, setUsername] = useState(user ? user.username : 'Loading...');
+  const [avatar, setAvatar] = useState(localStorage.getItem('avatar') || defaultAvatar);
+
+  const [springProps, api] = useSpring(() => ({
+    y: 0,
+    config: { tension: 300, friction: 20 },
+  }));
+  
+  const scrollRef = useRef(null);
+  const [isAtBottom, setIsAtBottom] = useState(false);
+  
+  const handleScroll = (e) => {
+    const scrollElement = e.target;
+    const scrollTop = scrollElement.scrollTop;
+    const maxScrollTop = scrollElement.scrollHeight - scrollElement.clientHeight;
+  
+    if (scrollTop >= maxScrollTop) {
+      setIsAtBottom(true);
+      api.start({ y: (scrollTop - maxScrollTop) * 0.3 });
+    } else {
+      setIsAtBottom(false);
+      api.start({ y: 0 });
     }
-  }, []);
+  };
+  
+  const handleScrollRelease = () => {
+    if (isAtBottom) {
+      api.start({ y: 0 });
+    }
+  };
+  
+  useEffect(() => {
+    const scrollElement = scrollRef.current;
+    scrollElement.addEventListener('scroll', handleScroll);
+    scrollElement.addEventListener('touchend', handleScrollRelease);
+    scrollElement.addEventListener('mouseup', handleScrollRelease);
+  
+    return () => {
+      scrollElement.removeEventListener('scroll', handleScroll);
+      scrollElement.removeEventListener('touchend', handleScrollRelease);
+      scrollElement.removeEventListener('mouseup', handleScrollRelease);
+    };
+  }, [isAtBottom]);
+
+  useEffect(() => {
+    if (user) {
+      setUsername(user.username);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    localStorage.setItem('username', username);
+    localStorage.setItem('avatar', avatar);
+  }, [username, avatar]);
 
   const handleClaimClick = (info) => {
     setTaskInfo(info);
@@ -77,9 +127,27 @@ function Home() {
     setWalletModalVisible(false);
   };
 
-  const handleHideTasks = () => {
-    setTasksVisible(false);
-    localStorage.setItem('tasksVisible', JSON.stringify(false));
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handleAvatarChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatar(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleProfileEditClick = () => {
+    setProfileEditModalVisible(true);
+  };
+
+  const closeProfileEditModal = () => {
+    setProfileEditModalVisible(false);
   };
 
   const tasks = [
@@ -107,8 +175,9 @@ function Home() {
           <div className='nae'>
             <span className='nameava'>
               <span className='imgheader'>
-                <img src={avatar} alt='' />
-                <p>{user ? user.username : 'Loading...'}</p>
+                <img src={avatar} alt='Avatar' />
+                <p>{username}</p>
+                <button className='edit-button' onClick={handleProfileEditClick}>✏️</button>
               </span>
               <span className='frenhead'>
                 <p>5 friends</p>
@@ -150,6 +219,14 @@ function Home() {
           </div>
         )}
 
+        {profileEditModalVisible && (
+          <div className='profile-edit-modal'>
+            <input type="text" value={username} onChange={handleUsernameChange} placeholder="Enter new username" />
+            <input type="file" accept="image/*" onChange={handleAvatarChange} />
+            <button onClick={closeProfileEditModal}>Close</button>
+          </div>
+        )}
+
         {tasksVisible && (
           <div className='tasks'>
             <h1>
@@ -176,7 +253,11 @@ function Home() {
             </div>
           </div>
 
-          <div className='switchcontent'>
+          <animated.div
+            className='switchcontent'
+            ref={scrollRef}
+            style={{ transform: springProps.y.to(y => `translateY(${y}px)`) }}
+          >
             {filteredTasks.map(task => (
               <div className='tasking' key={task.id}>
                 <img src={tg} alt='Telegram' />
@@ -188,17 +269,15 @@ function Home() {
                   <p>{task.reward} coins</p>
                   <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}>claim</button>
                 </div>
-                
               </div>
             ))}
-          </div>
+          </animated.div>
         </div>
-      
         <div className='fot'>
-          <div className='fotcont'> 
-            <Link to='/'><button className='activebtn'><img src={fotlogo} alt='Home'></img></button></Link>
-            <Link to='/Contact'><button><img src={fotlogo2} alt='Contact'></img></button></Link>
-            <Link to='/about'><button><img src={fotlogo3} alt='About'></img></button></Link>
+          <div className='fotcont'>
+            <Link to='/'><button><img src={fotlogo} alt='Home'/></button></Link>
+            <Link to='/Contact'><button className='activebtn'><img src={fotlogo2} alt='Contact'/></button></Link>
+            <Link to='/about'><button><img src={fotlogo3} alt='About'/></button></Link>
           </div>
         </div>
       </div>

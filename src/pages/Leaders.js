@@ -1,33 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/home.css';
 import avatar from '../components/wlcpage/headavatar.png';
 import { Link } from 'react-router-dom';
-import tg from '../imgs/tg.svg';
-import logofot from '../imgs/logofot.svg';
+import Modal from '../components/modal.js';
+import wltlogo from '../imgs/wallet.svg';
 import fotlogo from '../imgs/fotlogo.svg';
 import fotlogo2 from '../imgs/fotlogo2.svg';
 import fotlogo3 from '../imgs/fotlogo3.svg';
-import Modal from '../components/modal.js';
-import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
 import useTelegramUser from '../hooks/useTelegramUser'; // Проверьте путь
+import { useTaskContext } from '../context/TaskContext';
+import { useSpring, animated } from '@react-spring/web';
 
 function Leaders() {
   const [showModal, setShowModal] = useState(false);
   const [taskInfo, setTaskInfo] = useState('');
   const [walletModalVisible, setWalletModalVisible] = useState(false);
   const [filter, setFilter] = useState('all');
-  const [tasksVisible, setTasksVisible] = useState(true);
+  const { tasksVisible, handleHideTasks } = useTaskContext();
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
   const user = useTelegramUser();
 
-  useEffect(() => {
-    const savedTasksVisibility = localStorage.getItem('tasksVisible');
-    if (savedTasksVisibility !== null) {
-      setTasksVisible(JSON.parse(savedTasksVisibility));
+  const [springProps, api] = useSpring(() => ({ y: 0, config: { tension: 300, friction: 20 } }));
+  const scrollRef = useRef(null);
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  const handleScroll = (e) => {
+    const scrollElement = e.target;
+    const scrollTop = scrollElement.scrollTop;
+    const maxScrollTop = scrollElement.scrollHeight - scrollElement.clientHeight;
+
+    if (scrollTop >= maxScrollTop) {
+      setIsAtBottom(true);
+      api.start({ y: (scrollTop - maxScrollTop) * 0.3 });
+    } else {
+      setIsAtBottom(false);
+      api.start({ y: 0 });
     }
-  }, []);
+  };
+
+  const handleScrollRelease = () => {
+    if (isAtBottom) {
+      api.start({ y: 0 });
+    }
+  };
+
+  useEffect(() => {
+    const scrollElement = scrollRef.current;
+    scrollElement.addEventListener('scroll', handleScroll);
+    scrollElement.addEventListener('touchend', handleScrollRelease);
+    scrollElement.addEventListener('mouseup', handleScrollRelease);
+
+    return () => {
+      scrollElement.removeEventListener('scroll', handleScroll);
+      scrollElement.removeEventListener('touchend', handleScrollRelease);
+      scrollElement.removeEventListener('mouseup', handleScrollRelease);
+    };
+  }, [isAtBottom]);
 
   const handleClaimClick = (info) => {
     setTaskInfo(info);
@@ -76,11 +106,6 @@ function Leaders() {
     setWalletModalVisible(false);
   };
 
-  const handleHideTasks = () => {
-    setTasksVisible(false);
-    localStorage.setItem('tasksVisible', JSON.stringify(false));
-  };
-
   const tasks = [
     { id: 1, type: 'Social activity', description: 'Subscribe on telegram', reward: 50 },
     { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
@@ -98,9 +123,9 @@ function Leaders() {
 
   return (
     <div className="container">
-                <div className='ttt'>
-           <p>Some text Some text Some text Some text Some text Some text</p>
-        </div>
+      <div className='ttt'>
+        <p>Some text Some text Some text Some text Some text Some text</p>
+      </div>
       <div className='headerr'>
         <div className='nae'>
           <span className='nameava'>
@@ -129,7 +154,7 @@ function Leaders() {
           <p>Some text Some text Some text Some text Some text Some text</p>
         </div>
       )}
-      
+
       <div className='maincontent leadhei'>
         <div className='switchfix'>
           <div className='switches'>
@@ -138,7 +163,11 @@ function Leaders() {
           </div>
         </div>
 
-        <div className='switchcontent padd'>
+        <animated.div
+          className='switchcontent padd'
+          ref={scrollRef}
+          style={{ transform: springProps.y.to(y => `translateY(${y}px)`) }}
+        >
           {[...Array(12)].map((_, index) => (
             <div className='tasking' key={index}>
               <img src={avatar} width='36px' alt='avatar' />
@@ -152,7 +181,7 @@ function Leaders() {
               </div>
             </div>
           ))}
-        </div>
+        </animated.div>
       </div>
 
       <div className='fot'>
