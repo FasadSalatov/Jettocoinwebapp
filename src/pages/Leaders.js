@@ -13,6 +13,7 @@ import { useTaskContext } from '../context/TaskContext';
 import { useSpring, animated } from '@react-spring/web';
 
 function Leaders() {
+  const [profileEditModalVisible, setProfileEditModalVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [taskInfo, setTaskInfo] = useState('');
   const [walletModalVisible, setWalletModalVisible] = useState(false);
@@ -75,6 +76,14 @@ function Leaders() {
       console.error('Ошибка подключения кошелька:', error);
     }
   };
+  
+  const handleProfileEditClick = () => {
+    setProfileEditModalVisible(true);
+  };
+
+  const closeProfileEditModal = () => {
+    setProfileEditModalVisible(false);
+  };
 
   const handleWalletClick = () => {
     setWalletModalVisible(true);
@@ -96,6 +105,7 @@ function Leaders() {
       console.error('Ошибка отключения кошелька:', error);
     }
   };
+
 
   const maskWallet = (address) => {
     if (!address) return '';
@@ -131,7 +141,7 @@ function Leaders() {
           <span className='nameava'>
             <span className='imgheader'>
               <img src={avatar} alt='' />
-              <p>{user ? user.username : 'Loading...'}</p> {/* Отображаем имя пользователя */}
+              <p>{user ? user.username : ''}</p> {/* Отображаем имя пользователя */}
             </span>
             <span className='frenhead'>
               <p>5 friends</p>
@@ -182,6 +192,7 @@ function Leaders() {
             </div>
           ))}
         </animated.div>
+        <div className={`blur-overlay ${showModal || walletModalVisible || profileEditModalVisible ? 'show' : 'show'}`} />
       </div>
 
       <div className='fot'>

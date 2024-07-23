@@ -11,6 +11,8 @@ import Modal from '../components/modal2.js';
 import '../components/wlcpage/modal2.css';
 
 function Contact() {
+    const [walletModalVisible, setWalletModalVisible] = useState(false);
+    const [profileEditModalVisible, setProfileEditModalVisible] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [tasksVisible, setTasksVisible] = useState(true);
 
@@ -93,7 +95,8 @@ function Contact() {
             <div className='valuetask'> <g>Profit:</g> <p className='fivetoten'>5/10</p></div>
         </div>
     </div>
-</div>
+    
+</div> <div className={`blur-overlay ${showModal || walletModalVisible || profileEditModalVisible ? 'show' : 'show'}`} />
 </div>
             <div className='headerr'>
                 <div className='nae'>

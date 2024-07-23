@@ -27,7 +27,7 @@ function Home() {
   const userFriendlyAddress = useTonAddress();
   const rawAddress = useTonAddress(false);
 
-  const [username, setUsername] = useState(user ? user.username : 'Loading...');
+  const [username, setUsername] = useState(user ? user.username : '');
   const [avatar, setAvatar] = useState(localStorage.getItem('avatar') || defaultAvatar);
 
   const [springProps, api] = useSpring(() => ({
