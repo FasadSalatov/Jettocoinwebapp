@@ -900,7 +900,7 @@ flex-grow: 0;
     position: relative;
     z-index: 102103013;
     width: 40% !important;
-    margin-bottom: -2%;
+    margin-bottom: -2.5%;
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -1637,7 +1637,7 @@ flex: none;
 order: 3;
 align-self: center;
 flex-grow: 0;
-margin-top: 2%;
+margin-top: 1%;
 
 }
 
@@ -1762,7 +1762,7 @@ flex-grow: 0;
 
 .headerr {
     /* Profile preview */
-    margin-top: 2%;
+    margin-top: 1%;
     box-sizing: border-box;
 
     /* Auto layout */
