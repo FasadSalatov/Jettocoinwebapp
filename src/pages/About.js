@@ -96,7 +96,6 @@ function About() {
             </div>
 
             <div className='fot'>
-                <div><img src={logofot} alt='Logo' className='logofot'/></div>
                 <div className='fotcont'>
                     <Link to='/'><button><img src={fotlogo} alt='Home'></img></button></Link>
                     <Link to='/Contact' ><button><img src={fotlogo2} alt='Contact'></img></button></Link>
