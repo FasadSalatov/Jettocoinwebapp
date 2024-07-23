@@ -271,6 +271,7 @@ flex-grow: 0;
 
 }
 .miniswitch {
+    margin-top: 2%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
