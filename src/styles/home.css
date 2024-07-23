@@ -899,9 +899,8 @@ flex-grow: 0;
     text-align: center; /* Выравнивание по центру */
     position: relative;
     z-index: 102103013;
-    width: 100%;
-    height: 100%;
-    margin-bottom: -50%;
+
+    margin-bottom: -5%;
     
     display: flex;
     flex-direction: column;
