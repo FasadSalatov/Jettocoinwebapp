@@ -16,12 +16,6 @@ function Contact() {
     const [showModal, setShowModal] = useState(false);
     const [tasksVisible, setTasksVisible] = useState(true);
 
-    useEffect(() => {
-        const savedTasksVisibility = localStorage.getItem('tasksVisible');
-        if (savedTasksVisibility !== null) {
-            setTasksVisible(JSON.parse(savedTasksVisibility));
-        }
-    }, []);
 
     const handleCopyClick = () => {
         // Логика копирования ссылки в буфер обмена
@@ -111,17 +105,7 @@ function Contact() {
                 </div>
             </div>
 
-            {tasksVisible && (
-                <div className='tasks'>
-                    <h1>
-                        Tasks
-                        <button onClick={handleHideTasks} className='close-btn'>×</button>
-                    </h1>
-                    <p>Some text Some text Some text Some text Some text Some text</p>
-                </div>
-            )}
-
-
+        
 
 
 
