@@ -169,6 +169,7 @@ function Leaders() {
         <div className='switchfix'>
           <div className='switches'>
             <Link to='/' className='linkbtn'><button className='btn2'>Tasks</button></Link>
+            <p className='ras'>|</p>
             <Link><button className='btn3'>Leaders</button></Link>
           </div>
         </div>
