@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center !important;
-    overflow-y: hidden !important;
+    overflow: hidden !important;
     position: fixed;
 }
 
