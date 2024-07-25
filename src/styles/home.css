@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 #root {
     display: flex;
     justify-content: center;
     align-items: center !important;
-    overflow-y: none !important;
+    overflow-y: hidden !important;
     position: fixed;
 }
 
@@ -20,6 +21,14 @@
 }
 
 .wallet-button {
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
+text-align: center;
+color: white;
     color: white;
     display: flex;
     justify-content: center;
@@ -47,7 +56,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: none;
+    overflow-y: hidden;
 }
 
 .blur-overlay {
@@ -85,19 +94,18 @@ padding: 20px;
 gap: 16px;
 
 
-width: 95% !important;
+width: 100% !important;
 height: 30vh;
 
 /* White */
 background: #FFFFFF;
 /* stroke */
-border: 1px solid #EDEDED;
-border-radius: 20px;
+
 
 /* Inside auto layout */
 align-self: center;
 box-shadow: inset 0px -41px 52.5px #FFFFFF;
-margin-top: 2%;
+margin-top: -1%;
 flex-grow: 1;
 }
 
@@ -147,7 +155,7 @@ flex-direction: row;
 align-items: center;
 justify-content: space-around;
 padding: 0px 12px;
-width: 90%;
+width: 95%;
 height: 80px;
 margin-bottom: -8%;
 
@@ -155,7 +163,7 @@ margin-bottom: -8%;
 background: #FFFFFF;
 /* stroke */
 border: 1px solid #EDEDED;
-border-radius: 100px;
+border-radius: 20px;
 
 }
 
@@ -174,7 +182,6 @@ max-height: 44px;
 
 
 /* bg */
-background: #F5F5F5;
 border-radius: 90px;
 
 /* Inside auto layout */
@@ -202,7 +209,7 @@ height: 36px;
 
 /* Blue */
 background: #3481DC;
-border-radius: 20px;
+border-radius: 15px;
 
 /* Inside auto layout */
 flex: none;
@@ -240,7 +247,7 @@ height: 36px;
 
 /* Blue */
 background: #3481DC;
-border-radius: 20px;
+border-radius: 15px;
 
 /* Inside auto layout */
 flex: none;
@@ -381,14 +388,13 @@ align-items: center;
 padding: 20px;
 gap: 12px;
 margin-top: 1%;
-width: 95%;
+width: 100%;
 height: 281px;
 
 /* White */
 background: #FFFFFF;
 /* stroke */
 border: 1px solid #EDEDED;
-border-radius: 20px;
 /* Inside auto layout */
 flex: none;
 align-self: center;
@@ -407,14 +413,13 @@ padding: 20px;
 gap: 16px;
 
 overflow-x: hidden;
-width: 100%;
+width: 100% !important;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
 overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
 
 /* Inside auto layout */
 
-width: 95% !important;
 height: 30vh;
 
 /* White */
@@ -507,9 +512,6 @@ border-radius: 40px;
   
 
 .tasking {
-    -webkit-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
--moz-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 /* Auto layout */
 display: flex !important;
 flex-direction: row;
@@ -521,8 +523,7 @@ width: 90% !important;
 height: 42px;
 
 /* stroke */
-background: #EDEDED;
-border-radius: 30px;
+border-bottom: 1px solid #EDEDED;
 
 /* Inside auto layout */
 margin-top: 2%;
@@ -538,7 +539,7 @@ margin-top: 2%;
     align-items: center;
     width: 100%;
     top: -25px;
-    padding-top: 2%;
+    margin-top: -2%;
     background-color: white;
     z-index: 10;
 }
@@ -632,13 +633,12 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
     position: relative;
 
     background: #FFFFFF;
-    border: 1px solid #EDEDED;
     border-radius: 20px;
 
     flex: none;
     align-self: center;
     flex-grow: 0;
-    margin-top: 2%;
+    margin-top: -1%;
     z-index: 8;
 }
 
@@ -648,20 +648,13 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
     margin-top: -10px;
     align-self: center !important;
     justify-content: center;
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 .tskkk {
     /* Oleg */
 
-width: 32px;
-height: 18px;
 
-font-family: 'Inter Tight';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 110%;
 /* identical to box height, or 18px */
 letter-spacing: -0.02em;
 margin-left: -50%;
@@ -732,7 +725,7 @@ flex-grow: 0;
 
 .tasking img {
     padding-right: 2%;
-    margin-left: -7% !important;
+    margin-left: -15% !important;
 }
 
 
@@ -813,15 +806,20 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 6px 12px;
-margin-left: 15%;
+margin-left: 25%;
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 110%;
 
-width: 70%;
+width: 60%;
 height: 35px;
 
 /* green */
-background: #04B900;
+background: #464646;
 /* green */
-border: 1px solid #04B900;
+border: none;
 border-radius: 50px;
 color: white;
 /* Inside auto layout */
@@ -832,16 +830,31 @@ flex-grow: 0;
 
 }
 
-.tasking img {
+.tskimg {
+    display: flex;
+    align-items: center;
+    align-self: center;
     margin-left: -5%;
-    padding-right: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-right: 7px;
+    border-radius: 12px;
+    background-color: #b8b8b841;
+}
+
+.tasking img {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-left: -5%;
+    margin-right: 10%;
 }
 
 .valuetask {
     display: flex;
     flex-direction: row;
-    width: 30%;
-    margin-right: 10%;
+    width: 50%;
+    margin-right: -20%;
 }
 
 .valuetask p {
@@ -856,13 +869,11 @@ justify-content: center;
 align-items: center;
 padding: 6px 8px;
 gap: 10px;
-width: 70%;
+
 height: 35px;
 
 /* White */
-background: #FFFFFF;
 /* Blue */
-border: 1px solid #3481DC;
 border-radius: 130px;
 
 /* Inside auto layout */
@@ -883,7 +894,7 @@ line-height: 110%;
 text-align: right;
 
 /* Blue */
-color: #3481DC;
+
 
 
 /* Inside auto layout */
@@ -923,8 +934,19 @@ justify-content: center;
 align-items: center;
 padding: 12px 44px;
 gap: 8px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 12px;
+margin-left: 15%;
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
 
-width: 25% !important;
+width: 30% !important;
 height: 34px;
 
 /* Blue */
@@ -1042,8 +1064,10 @@ width: 120px;
 font-family: 'Inter Tight';
 font-style: normal;
 font-weight: 500;
-font-size: 12px;
+font-size: 14px;
 line-height: 110%;
+white-space: nowrap !important;
+
 /* or 13px */
 
 /* Black */
@@ -1053,6 +1077,7 @@ color: #1B191B;
 /* Inside auto layout */
 
 }
+
 
 .typetask {
     /* Text */
@@ -1085,6 +1110,7 @@ font-size: 12px;
 line-height: 110%;
 /* or 13px */
 letter-spacing: -0.02em;
+
 
 /* Black */
 color: #1B191B;
@@ -1252,6 +1278,7 @@ color: #FFFFFF;
 /* Auto layout */
 display: flex;
 flex-direction: row;
+justify-content: center;
 align-items: center;
 padding: 0px;
 gap: 5px;
@@ -1267,7 +1294,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-padding: 12px;
+padding: 15px;
+
 gap: 21px;
 
 height: 51px;
@@ -1301,7 +1329,7 @@ border-radius: 100px;
 
 .btn2 {
     /* category switch button */
-
+background: none;
 /* Auto layout */
 display: flex;
 flex-direction: row;
@@ -1400,7 +1428,17 @@ height: 40px;
 /* Blue */
 background: #3481DC;
 border-radius: 40px;
-
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 12px;
+margin-left: 15%;
+font-family: 'Inter Tight' !important;
+font-style: normal;
+font-weight: 600;
+font-size: 16px !important;
+line-height: 110%;
 /* Inside auto layout */
 flex: none;
 order: 1;
@@ -1623,13 +1661,12 @@ align-content: center;
 padding: 20px;
 gap: 12px;
 
-width: 95% !important;
+width: 100% !important;
 height: 136px;
 
 /* White */
 background: #FFFFFF;
 /* stroke */
-border: 1px solid #EDEDED;
 border-radius: 20px;
 
 /* Inside auto layout */
@@ -1637,7 +1674,7 @@ flex: none;
 order: 3;
 align-self: center;
 flex-grow: 0;
-margin-top: 1%;
+margin-top: -2%;
 
 }
 
@@ -1754,15 +1791,13 @@ color: #3481DC;
 
 
 /* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+
 
 }
 
 .headerr {
     /* Profile preview */
-    margin-top: 1%;
+    margin-top: -1%;
     box-sizing: border-box;
 
     /* Auto layout */
@@ -1773,14 +1808,14 @@ flex-grow: 0;
     padding: 20px;
     gap: 18px;
 
-    width: 95%;
+    width: 100%;
     min-height: 149px;
 
     /* White */
     background: #FFFFFF;
     /* stroke */
-    border: 1px solid #EDEDED;
-    border-radius: 20px;
+
+
 
     /* Inside auto layout */
 }
@@ -1873,7 +1908,7 @@ flex-grow: 0;
     display: flex;
     flex-direction: row !important;
     justify-content: space-around;
-    height: 40px;
+    height: 60px;
     align-items: center;
 }
 

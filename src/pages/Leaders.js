@@ -186,7 +186,7 @@ function Leaders() {
                 <p className='tskkk'>Oleg</p>
               </div>
               <div className='valuetask'>
-                <g>coins</g>
+                <g>coins:</g>
                 <p>50</p>
               </div>
             </div>

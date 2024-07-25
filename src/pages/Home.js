@@ -262,14 +262,13 @@ function Home() {
           >
             {filteredTasks.map(task => (
               <div className='tasking' key={task.id}>
-                <img src={tg} alt='Telegram' />
+                <img className='tskimg' src={tg} alt='Telegram' />
                 <div className='tskk'>
-                  <p className='typetask'>{task.type}</p>
                   <p className='tsk'>{task.description}</p>
                 </div>
                 <div className='valuetask'>
-                  <p>{task.reward} coins</p>
-                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}>claim</button>
+                 
+                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}><p>{task.reward} to claim</p></button>
                 </div>
               </div>
             ))}
