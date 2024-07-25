@@ -247,13 +247,7 @@ function Home() {
               <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
             </div>
 
-            <div className='miniswitch'>
-              <button className={`minibtn ${filter === 'all' ? 'minibtnactive' : ''}`} onClick={() => setFilter('all')}>All</button>
-              <p className='ras'>|</p>
-              <button className={`minibtn ${filter === 'social activity' ? 'minibtnactive' : ''}`} onClick={() => setFilter('social activity')}>Social activity</button>
-              <p className='ras'>|</p>
-              <button className={`minibtn ${filter === 'manual verification' ? 'minibtnactive' : ''}`} onClick={() => setFilter('manual verification')}>Manual verification</button>
-            </div>
+
           </div>
 
           <animated.div
