@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center !important;
-    overflow-y: none !important;
+    overflow-y: hidden !important;
     position: fixed;
 }
 
@@ -56,7 +56,7 @@ color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: none;
+    overflow-y: hidden;
 }
 
 .blur-overlay {
