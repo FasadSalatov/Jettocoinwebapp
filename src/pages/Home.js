@@ -264,7 +264,6 @@ function Home() {
               <div className='tasking' key={task.id}>
                 <img src={tg} alt='Telegram' />
                 <div className='tskk'>
-                  <p className='typetask'>{task.type}</p>
                   <p className='tsk'>{task.description}</p>
                 </div>
                 <div className='valuetask'>

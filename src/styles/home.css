@@ -506,9 +506,6 @@ border-radius: 40px;
   
 
 .tasking {
-    -webkit-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
--moz-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
-box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 /* Auto layout */
 display: flex !important;
 flex-direction: row;
@@ -520,8 +517,7 @@ width: 90% !important;
 height: 42px;
 
 /* stroke */
-background: #EDEDED;
-border-radius: 30px;
+border-bottom: 1px solid #EDEDED;
 
 /* Inside auto layout */
 margin-top: 2%;
@@ -1870,14 +1866,14 @@ flex-grow: 0;
     display: flex;
     flex-direction: row !important;
     justify-content: space-around;
-    height: 40px;
+    height: 60px;
     align-items: center;
 }
 
 
 .imgheader {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     width: 100%;
     align-items: center;
 }
