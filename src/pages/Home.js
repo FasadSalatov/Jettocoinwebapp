@@ -209,6 +209,8 @@ function Home() {
           </div>
         </div>
 
+        <div className='cher'></div>
+
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
         {walletModalVisible && (
@@ -243,7 +245,6 @@ function Home() {
           <div className='switchfix'>
             <div className='switches'>
               <button className='btn1'>Tasks</button>
-              <p className='ras'>|</p>
               <Link to='/leaders'><button className='btn2'>Leaders</button></Link>
             </div>
 
