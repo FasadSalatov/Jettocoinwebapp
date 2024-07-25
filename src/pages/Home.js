@@ -267,8 +267,8 @@ function Home() {
                   <p className='tsk'>{task.description}</p>
                 </div>
                 <div className='valuetask'>
-                  <p>{task.reward} coins</p>
-                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}>claim</button>
+                 
+                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}><p>{task.reward} to claim</p></button>
                 </div>
               </div>
             ))}

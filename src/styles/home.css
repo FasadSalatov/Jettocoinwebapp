@@ -182,7 +182,6 @@ max-height: 44px;
 
 
 /* bg */
-background: #F5F5F5;
 border-radius: 90px;
 
 /* Inside auto layout */
@@ -210,7 +209,7 @@ height: 36px;
 
 /* Blue */
 background: #3481DC;
-border-radius: 20px;
+border-radius: 15px;
 
 /* Inside auto layout */
 flex: none;
@@ -248,7 +247,7 @@ height: 36px;
 
 /* Blue */
 background: #3481DC;
-border-radius: 20px;
+border-radius: 15px;
 
 /* Inside auto layout */
 flex: none;
@@ -655,14 +654,7 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 .tskkk {
     /* Oleg */
 
-width: 32px;
-height: 18px;
 
-font-family: 'Inter Tight';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 110%;
 /* identical to box height, or 18px */
 letter-spacing: -0.02em;
 margin-left: -50%;
@@ -733,7 +725,7 @@ flex-grow: 0;
 
 .tasking img {
     padding-right: 2%;
-    margin-left: -7% !important;
+    margin-left: -15% !important;
 }
 
 
@@ -814,15 +806,20 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 6px 12px;
-margin-left: 15%;
+margin-left: 25%;
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 110%;
 
-width: 70%;
+width: 60%;
 height: 35px;
 
 /* green */
-background: #04B900;
+background: #464646;
 /* green */
-border: 1px solid #04B900;
+border: none;
 border-radius: 50px;
 color: white;
 /* Inside auto layout */
@@ -841,8 +838,8 @@ flex-grow: 0;
 .valuetask {
     display: flex;
     flex-direction: row;
-    width: 30%;
-    margin-right: 10%;
+    width: 50%;
+    margin-right: -20%;
 }
 
 .valuetask p {
@@ -857,13 +854,11 @@ justify-content: center;
 align-items: center;
 padding: 6px 8px;
 gap: 10px;
-width: 70%;
+
 height: 35px;
 
 /* White */
-background: #FFFFFF;
 /* Blue */
-border: 1px solid #3481DC;
 border-radius: 130px;
 
 /* Inside auto layout */
@@ -884,7 +879,7 @@ line-height: 110%;
 text-align: right;
 
 /* Blue */
-color: #3481DC;
+
 
 
 /* Inside auto layout */
@@ -924,8 +919,19 @@ justify-content: center;
 align-items: center;
 padding: 12px 44px;
 gap: 8px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 12px;
+margin-left: 15%;
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
 
-width: 25% !important;
+width: 30% !important;
 height: 34px;
 
 /* Blue */
@@ -1043,8 +1049,10 @@ width: 120px;
 font-family: 'Inter Tight';
 font-style: normal;
 font-weight: 500;
-font-size: 12px;
+font-size: 14px;
 line-height: 110%;
+white-space: nowrap !important;
+
 /* or 13px */
 
 /* Black */
@@ -1054,6 +1062,7 @@ color: #1B191B;
 /* Inside auto layout */
 
 }
+
 
 .typetask {
     /* Text */
@@ -1086,6 +1095,7 @@ font-size: 12px;
 line-height: 110%;
 /* or 13px */
 letter-spacing: -0.02em;
+
 
 /* Black */
 color: #1B191B;
@@ -1304,7 +1314,7 @@ border-radius: 100px;
 
 .btn2 {
     /* category switch button */
-
+background: none;
 /* Auto layout */
 display: flex;
 flex-direction: row;
@@ -1403,7 +1413,17 @@ height: 40px;
 /* Blue */
 background: #3481DC;
 border-radius: 40px;
-
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 12px;
+margin-left: 15%;
+font-family: 'Inter Tight' !important;
+font-style: normal;
+font-weight: 600;
+font-size: 16px !important;
+line-height: 110%;
 /* Inside auto layout */
 flex: none;
 order: 1;
@@ -1756,9 +1776,7 @@ color: #3481DC;
 
 
 /* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+
 
 }
 
