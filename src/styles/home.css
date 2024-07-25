@@ -1883,7 +1883,7 @@ flex-grow: 0;
 
 .imgheader {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     width: 100%;
     align-items: center;
 }
