@@ -11,6 +11,7 @@
     user-select: none; 
 }
 
+
 .wallet-container {
     display: flex;
     flex-direction: row;
@@ -165,9 +166,14 @@ border-radius: 20px;
 
 }
 
+.cher {
+    width: 100%;
+    height: 15px;
+}
+
 .switches {
     /* Switch category */
-
+    background-color: #b8b8b881;
 /* Auto layout */
 display: flex;
 flex-direction: row;
@@ -180,8 +186,9 @@ max-height: 44px;
 
 
 /* bg */
-border-radius: 90px;
-
+border-radius: 15px;
+padding-left: 10px;
+padding-right: 10px;
 /* Inside auto layout */
 flex: none;
 order: 0;
@@ -206,7 +213,7 @@ width: 100%;
 height: 36px;
 
 /* Blue */
-
+background: #3481DC;
 border-radius: 15px;
 
 /* Inside auto layout */
@@ -221,7 +228,7 @@ font-size: 16px;
 line-height: 150%;
 text-align: center;
 color: #1B191B;
-color: rgb(0, 0, 0);
+color: white;
 }
 
 .go157313249 {
@@ -232,20 +239,26 @@ color: rgb(0, 0, 0);
 .btn1 {
     /* category switch button */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 12px;
-    gap: 8px;
-    width: 50%;
-    height: 36px;
-    /* background: #3481DC; */
-    border-radius: 15px;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-    border: none;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 12px;
+gap: 8px;
+
+width: 50%;
+height: 36px;
+
+/* Blue */
+background: #3481DC;
+border-radius: 15px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+border: none;
 }
 
 .btn1 {
@@ -260,7 +273,7 @@ line-height: 150%;
 text-align: center;
 
 /* White */
-color: #000000;
+color: #FFFFFF;
 
 
 /* Inside auto layout */
@@ -275,7 +288,8 @@ flex-grow: 0;
     flex-direction: row;
     justify-content: space-around;
     align-items: end;
-    width: 95%;
+    width: 100%;
+    
 }
 
 .miniswitch button {

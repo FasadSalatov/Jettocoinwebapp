@@ -209,6 +209,8 @@ function Home() {
           </div>
         </div>
 
+        <div className='cher'></div>
+
         <Modal show={showModal} onClose={handleCloseModal} taskInfo={taskInfo} />
 
         {walletModalVisible && (
