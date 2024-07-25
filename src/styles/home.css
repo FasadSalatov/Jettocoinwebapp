@@ -100,7 +100,7 @@ height: 30vh;
 /* White */
 background: #FFFFFF;
 /* stroke */
-border-radius: 20px;
+
 
 /* Inside auto layout */
 align-self: center;
@@ -396,7 +396,6 @@ height: 281px;
 background: #FFFFFF;
 /* stroke */
 border: 1px solid #EDEDED;
-border-radius: 20px;
 /* Inside auto layout */
 flex: none;
 align-self: center;
@@ -1783,7 +1782,7 @@ flex-grow: 0;
     background: #FFFFFF;
     /* stroke */
 
-    border-radius: 20px;
+
 
     /* Inside auto layout */
 }
