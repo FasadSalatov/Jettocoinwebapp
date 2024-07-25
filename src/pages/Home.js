@@ -48,13 +48,13 @@ function Home() {
       api.start({ y: (scrollTop - maxScrollTop) * 0.3 });
     } else {
       setIsAtBottom(false);
-      api.start({ y: 0 });
+      api.start({ y: 10 });
     }
   };
 
   const handleScrollRelease = () => {
     if (isAtBottom) {
-      api.start({ y: 0 });
+      api.start({ y: 10 });
     }
   };
 
