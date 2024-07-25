@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 #root {
     display: flex;
     justify-content: center;
@@ -85,7 +86,7 @@ padding: 20px;
 gap: 16px;
 
 
-width: 95% !important;
+width: 100% !important;
 height: 30vh;
 
 /* White */
@@ -147,7 +148,7 @@ flex-direction: row;
 align-items: center;
 justify-content: space-around;
 padding: 0px 12px;
-width: 90%;
+width: 100%;
 height: 80px;
 margin-bottom: -8%;
 
@@ -155,7 +156,7 @@ margin-bottom: -8%;
 background: #FFFFFF;
 /* stroke */
 border: 1px solid #EDEDED;
-border-radius: 100px;
+border-radius: 20px;
 
 }
 
@@ -381,7 +382,7 @@ align-items: center;
 padding: 20px;
 gap: 12px;
 margin-top: 1%;
-width: 95%;
+width: 100%;
 height: 281px;
 
 /* White */
@@ -407,14 +408,13 @@ padding: 20px;
 gap: 16px;
 
 overflow-x: hidden;
-width: 100%;
+width: 100% !important;
  /* Максимальная высота, чтобы ограничить высоту контейнера */
 overflow-y: scroll; /* Добавляет вертикальную прокрутку, если содержимое превышает высоту контейнера */
 
 
 /* Inside auto layout */
 
-width: 95% !important;
 height: 30vh;
 
 /* White */
@@ -538,7 +538,7 @@ margin-top: 2%;
     align-items: center;
     width: 100%;
     top: -25px;
-    padding-top: 2%;
+    margin-top: -2%;
     background-color: white;
     z-index: 10;
 }
@@ -648,7 +648,7 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
     margin-top: -10px;
     align-self: center !important;
     justify-content: center;
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 .tskkk {
@@ -1623,7 +1623,7 @@ align-content: center;
 padding: 20px;
 gap: 12px;
 
-width: 95% !important;
+width: 100% !important;
 height: 136px;
 
 /* White */
@@ -1773,7 +1773,7 @@ flex-grow: 0;
     padding: 20px;
     gap: 18px;
 
-    width: 95%;
+    width: 100%;
     min-height: 149px;
 
     /* White */
