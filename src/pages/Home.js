@@ -262,7 +262,7 @@ function Home() {
           >
             {filteredTasks.map(task => (
               <div className='tasking' key={task.id}>
-                <img src={tg} alt='Telegram' />
+                <img className='tskimg' src={tg} alt='Telegram' />
                 <div className='tskk'>
                   <p className='tsk'>{task.description}</p>
                 </div>

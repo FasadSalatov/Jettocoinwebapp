@@ -830,15 +830,24 @@ flex-grow: 0;
 
 }
 
+.tskimg {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-left: -5%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-right: 7px;
+    border-radius: 12px;
+    background-color: #b8b8b841;
+}
+
 .tasking img {
     display: flex;
     align-items: center;
     align-self: center;
     margin-left: -5%;
     margin-right: 10%;
-    padding: 7px;
-    border-radius: 12px;
-    background-color: #b8b8b841;
 }
 
 .valuetask {
