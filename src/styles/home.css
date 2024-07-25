@@ -173,7 +173,6 @@ border-radius: 20px;
 
 .switches {
     /* Switch category */
-    background-color: #b8b8b881;
 /* Auto layout */
 display: flex;
 flex-direction: row;
