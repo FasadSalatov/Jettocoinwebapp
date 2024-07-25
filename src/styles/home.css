@@ -21,6 +21,14 @@
 }
 
 .wallet-button {
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 150%;
+text-align: center;
+color: white;
     color: white;
     display: flex;
     justify-content: center;
@@ -1246,6 +1254,7 @@ color: #FFFFFF;
 /* Auto layout */
 display: flex;
 flex-direction: row;
+justify-content: center;
 align-items: center;
 padding: 0px;
 gap: 5px;
@@ -1261,7 +1270,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-padding: 12px;
+padding: 15px;
+
 gap: 21px;
 
 height: 51px;
