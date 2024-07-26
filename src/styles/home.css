@@ -657,14 +657,14 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 }
 
 .tskkk {
-    /* Oleg */
+    height: 13px;
     font-family: 'Inter Tight';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 110%;
+    white-space: nowrap !important;
     color: #1B191B;
-    align-self: center;
 /* identical to box height, or 18px */
 letter-spacing: -0.02em;
 margin-left: -50%;
