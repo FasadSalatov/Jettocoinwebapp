@@ -57,6 +57,7 @@ color: white;
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
+    overflow-x: hidden !important;
 }
 
 .blur-overlay {
