@@ -196,6 +196,20 @@ color: #1B191B;
 
 }
 
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    text-align: center;
+  }
+  
+  .qr-container h2 {
+    margin-bottom: 20px;
+  }
+  
+
 .name input {
     border: none !important;
     outline: 0 !important;
