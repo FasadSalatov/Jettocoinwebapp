@@ -662,7 +662,10 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 
 .tskkk {
     /* Oleg */
-
+font-family: "Inter Tight";
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
 
 /* identical to box height, or 18px */
 letter-spacing: -0.02em;
