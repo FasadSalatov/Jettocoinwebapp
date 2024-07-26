@@ -1114,6 +1114,10 @@ opacity: 0.3;
 
 }
 
+.color {
+    color: #1B191B !important;
+}
+
 .valuetask g {
     /* Coins: */
 
@@ -1122,7 +1126,7 @@ height: 13px;
 
 font-family: 'Inter Tight';
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 12px;
 line-height: 110%;
 /* or 13px */
