@@ -108,6 +108,10 @@ margin-top: -1%;
 flex-grow: 1;
 }
 
+.refcontenter {
+    height: 40vh;
+}
+
 .activebtn {
     background: #b8b8b8 !important;
     border-radius: 12px;
