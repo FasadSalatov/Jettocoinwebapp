@@ -108,10 +108,6 @@ margin-top: -1%;
 flex-grow: 1;
 }
 
-.refcontenter {
-    height: 40vh !important;
-}
-
 .activebtn {
     background: #b8b8b8 !important;
     border-radius: 12px;
@@ -662,11 +658,13 @@ box-shadow: 1px -39px 33px -10px rgba(255, 255, 255, 0.71) inset;
 
 .tskkk {
     /* Oleg */
-font-family: "Inter Tight";
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1B191B;
+    align-self: center;
 /* identical to box height, or 18px */
 letter-spacing: -0.02em;
 margin-left: -50%;
@@ -737,10 +735,17 @@ flex-grow: 0;
 
 .tasking img {
     padding-right: 2%;
+    margin-left: -15%;
+}
+
+.tskimg {
     margin-left: -15% !important;
 }
 
-
+.amg {
+    margin-right: 1% !important;
+    margin-left: -28% !important;
+}
 
 
 .switchcontent {
@@ -1040,7 +1045,7 @@ height: 15px;
 
 font-family: 'Inter Tight';
 font-style: normal;
-font-weight: 600 !important;
+font-weight: 700 !important;
 font-size: 14px;
 line-height: 110%;
 /* or 15px */
