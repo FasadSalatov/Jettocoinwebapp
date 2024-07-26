@@ -91,7 +91,7 @@ function Contact() {
     </div>
     
 </div> <div className={`blur-overlay ${showModal || walletModalVisible || profileEditModalVisible ? 'show' : 'show'}`} />
-</div><div className='cher'></div>
+</div>
             <div className='headerr'>
                 <div className='nae'>
                     <p className='refh1'>Available for the claim</p>
@@ -108,7 +108,7 @@ function Contact() {
         
 
 
-            
+            <div className='cher'></div>
 
 
             <div className='refcontainer'>
