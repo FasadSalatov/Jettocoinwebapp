@@ -182,7 +182,7 @@ function Leaders() {
         >
           {[...Array(12)].map((_, index) => (
             <div className='tasking' key={index}>
-              <img src={avatar} width='36px' alt='avatar' />
+              <img src={avatar} width='36px' alt='avatar' className='amg'/>
               <div className='tskk'>
                 <p className='typetask'></p>
                 <p className='tskkk'>Oleg</p>
