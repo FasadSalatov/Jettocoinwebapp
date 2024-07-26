@@ -743,7 +743,7 @@ flex-grow: 0;
 }
 
 .amg {
-    margin-right: 1% !important;
+    margin-right: -1% !important;
     margin-left: -28% !important;
 }
 
