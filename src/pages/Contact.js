@@ -39,7 +39,7 @@ function Contact() {
 
     return (
         <div className="container">
-                        <div className='maincontent'>
+                        <div className='maincontent refcontenter'>
 
 <div className='switchfix'>
 
