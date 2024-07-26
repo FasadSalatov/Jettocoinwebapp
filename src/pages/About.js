@@ -24,7 +24,9 @@ function About() {
     return (
         <div className="container">
             <div className='setings'>
+            <p className='refh1 btntop'>Settings</p>
                 <button className='setbtn'>
+                    
                     <span>
                         <p className='hh1set'>Change the language</p>
                         <p className='hh2set'>English</p>
@@ -55,7 +57,7 @@ function About() {
                 </button>
 
                 <img src={term} className='term' alt="Terms" />
-            </div>
+            </div><div className='cher'></div>
             <div className='headerr'>
                 <div className='nae'>
                     <p className='refh1 btntop'>Statistics</p>
@@ -79,7 +81,7 @@ function About() {
                     </span>
                 </div>
             </div>
-
+            <div className='cher'></div>
             
 
             <div className='refcontainer'>
