@@ -946,6 +946,10 @@ flex-grow: 0;
     padding-bottom: 2%;
 }
 
+di {
+    height: 5px;
+}
+
 .btnref {
     /* Primary Button */
 

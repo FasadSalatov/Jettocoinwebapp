@@ -57,7 +57,8 @@ function About() {
                 </button>
 
                 <img src={term} className='term' alt="Terms" />
-            </div><div className='cher'></div>
+            </div>
+            <di></di>
             <div className='headerr'>
                 <div className='nae'>
                     <p className='refh1 btntop'>Statistics</p>
@@ -81,7 +82,7 @@ function About() {
                     </span>
                 </div>
             </div>
-            <div className='cher'></div>
+            
             
 
             <div className='refcontainer'>
