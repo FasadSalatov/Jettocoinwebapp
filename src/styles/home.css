@@ -109,7 +109,7 @@ flex-grow: 1;
 }
 
 .refcontenter {
-    height: 40vh;
+    height: 40vh !important;
 }
 
 .activebtn {
