@@ -227,6 +227,16 @@ border-radius: 20px;
 
 }
 
+.stylecontainer p {
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1B191B;
+    white-space: nowrap;
+}
+
 .saved {
     margin-top: 2%;
     height: 5vh !important;
