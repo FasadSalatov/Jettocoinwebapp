@@ -1669,6 +1669,10 @@ flex-grow: 0;
 
 }
 
+.refcontenter {
+    height: 40vh !important;
+}
+
 .refcontainer {
     /* Frame 33279 */
 
