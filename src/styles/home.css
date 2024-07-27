@@ -944,7 +944,7 @@ flex-grow: 0;
 
 .myref {
     padding-bottom: 4%;
-    padding-top: 4%;
+    padding-top: 40px;
 }
 
 di {
@@ -1440,10 +1440,6 @@ flex-grow: 0;
 
 .term {
     width: 100%;
-}
-
-.btntop {
-    margin-top: -4%;
 }
 
 .btnbot {
