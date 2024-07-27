@@ -49,14 +49,7 @@ function About() {
                     </label>
                 </div>
 
-                <button className='setbtn'>
-                    <span>
-                        <p className='hh1set'>Our website</p>
-                    </span>
-                    <img src={arrow} alt="Arrow" />
-                </button>
 
-                <img src={term} className='term' alt="Terms" />
             </div>
             <di></di>
             <div className='headerr'>
@@ -88,6 +81,7 @@ function About() {
             <div className='refcontainer'>
                 <p className='refh1'>Any questions?</p>
                 <span className='btnsharegroupsup'>
+                    <div className='btncopyemail'>
                     <button className='copy-email' onClick={handleCopyEmail}>
                         manager@jettonwallet.com
                     </button>
@@ -96,6 +90,15 @@ function About() {
                             <p>Support</p>
                         </button>
                     </Link>
+                    </div>
+                    <button className='setbtn'>
+                    <span>
+                        <p className='hh1set'>Our website</p>
+                    </span>
+                    <img src={arrow} alt="Arrow" />
+                </button>
+
+                <img src={term} className='term' alt="Terms" />
                 </span>
             </div>
 
