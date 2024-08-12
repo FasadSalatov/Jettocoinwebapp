@@ -20,6 +20,10 @@
     justify-content: space-between
 }
 
+.inactive {
+    background-color: #464646 !important;
+}
+
 .wallet-button {
 
 font-family: 'Inter Tight';

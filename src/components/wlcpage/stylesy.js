@@ -13,13 +13,28 @@ function Stylesy() {
   const avatars = new Array(20).fill(headavatar);
 
   useEffect(() => {
-    if (user && user.username) {
+    // Load saved nickname and avatar from localStorage
+    const savedNickname = localStorage.getItem('nickname');
+    const savedAvatar = localStorage.getItem('selectedAvatar');
+
+    if (savedNickname) {
+      setNickname(savedNickname);
+    } else if (user && user.username) {
       setNickname(user.username);
+    }
+
+    if (savedAvatar !== null) {
+      setSelectedAvatar(Number(savedAvatar));
     }
   }, [user]);
 
   const handleAvatarClick = (index) => {
     setSelectedAvatar(index);
+  };
+
+  const handleSave = () => {
+    localStorage.setItem('nickname', nickname);
+    localStorage.setItem('selectedAvatar', selectedAvatar);
   };
 
   return (
@@ -58,10 +73,14 @@ function Stylesy() {
         </div>
       </div>
       <div className='saved'>
-        <Link to='/'><button><p>Save</p></button></Link>
+        <Link to='/'>
+          <button onClick={handleSave}>
+            <p>Save</p>
+          </button>
+        </Link>
       </div>
       <div className='fotlogo'>
-        
+        {/* Add your footer or logo here if needed */}
       </div>
     </div>
   );

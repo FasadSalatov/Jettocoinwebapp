@@ -3,12 +3,11 @@ import '../styles/home.css';
 import avatar from '../components/wlcpage/headavatar.png';
 import { Link } from 'react-router-dom';
 import Modal from '../components/modal.js';
-import wltlogo from '../imgs/wallet.svg';
 import fotlogo from '../imgs/fotlogo.svg';
 import fotlogo2 from '../imgs/fotlogo2.svg';
 import fotlogo3 from '../imgs/fotlogo3.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
-import useTelegramUser from '../hooks/useTelegramUser'; // Проверьте путь
+import useTelegramUser from '../hooks/useTelegramUser';
 import { useTaskContext } from '../context/TaskContext';
 import { useSpring, animated } from '@react-spring/web';
 
@@ -22,6 +21,10 @@ function Leaders() {
   const [tonConnectUI] = useTonConnectUI();
   const wallet = useTonWallet();
   const user = useTelegramUser();
+
+  // Load username and balance from localStorage
+  const [username, setUsername] = useState(localStorage.getItem('nickname') || (user ? user.username : ''));
+  const [balance, setBalance] = useState(Number(localStorage.getItem('balance')) || 1000000);
 
   const [springProps, api] = useSpring(() => ({ y: 0, config: { tension: 300, friction: 20 } }));
   const scrollRef = useRef(null);
@@ -106,7 +109,6 @@ function Leaders() {
     }
   };
 
-
   const maskWallet = (address) => {
     if (!address) return '';
     return `${address.slice(2, 5)}****${address.slice(-2)}`;
@@ -141,7 +143,7 @@ function Leaders() {
           <span className='nameava'>
             <span className='imgheader'>
             <Link to='/stylesy'><img src={avatar} alt='Avatar' /></Link>
-              <p>{user ? user.username : ''}</p> {/* Отображаем имя пользователя */}
+              <p>{username}</p> {/* Display the loaded username */}
             </span>
             <span className='frenhead'>
               <p>5 friends</p>
@@ -149,7 +151,7 @@ function Leaders() {
           </span>
           <span className='headbtns'>
             <div className='coinss'>
-              <p>1 000 000 coins</p>
+              <p>{balance.toLocaleString()} coins</p> {/* Display the loaded balance */}
             </div>
           </span>
         </div>

@@ -12,7 +12,6 @@ import wltlogo from '../imgs/wallet.svg';
 import { TonConnectUIProvider, useTonConnectUI, useTonWallet, useTonAddress } from '@tonconnect/ui-react';
 import useTelegramUser from '../hooks/useTelegramUser';
 import { useTaskContext } from '../context/TaskContext.js';
-import Stylesy from '../components/wlcpage/stylesy.js';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -27,8 +26,11 @@ function Home() {
   const userFriendlyAddress = useTonAddress();
   const rawAddress = useTonAddress(false);
 
-  const [username, setUsername] = useState(user ? user.username : '');
-  const [avatar, setAvatar] = useState(localStorage.getItem('avatar') || defaultAvatar);
+  // Load username and avatar from localStorage or default values
+  const [username, setUsername] = useState(localStorage.getItem('nickname') || (user ? user.username : ''));
+  const [avatar, setAvatar] = useState(localStorage.getItem('selectedAvatar') ? defaultAvatar : defaultAvatar);
+  const [balance, setBalance] = useState(Number(localStorage.getItem('balance')) || 1000000);
+  const [completedTasks, setCompletedTasks] = useState(JSON.parse(localStorage.getItem('completedTasks')) || []);
 
   const [springProps, api] = useSpring(() => ({
     y: 0,
@@ -72,18 +74,28 @@ function Home() {
   }, [isAtBottom]);
 
   useEffect(() => {
-    if (user) {
+    if (user && !username) {
       setUsername(user.username);
     }
-  }, [user]);
+  }, [user, username]);
 
   useEffect(() => {
-    localStorage.setItem('username', username);
+    localStorage.setItem('nickname', username);
     localStorage.setItem('avatar', avatar);
-  }, [username, avatar]);
+    localStorage.setItem('balance', balance);
+    localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
+  }, [username, avatar, balance, completedTasks]);
 
-  const handleClaimClick = (info) => {
-    setTaskInfo(info);
+  const handleClaimClick = (taskId, reward) => {
+    if (completedTasks.includes(taskId)) return;
+
+    const newBalance = balance + reward;
+    const newCompletedTasks = [...completedTasks, taskId];
+
+    setBalance(newBalance);
+    setCompletedTasks(newCompletedTasks);
+
+    setTaskInfo(`You have claimed ${reward} coins!`);
     setShowModal(true);
   };
 
@@ -155,11 +167,7 @@ function Home() {
   const tasks = [
     { id: 1, type: 'Social activity', description: 'Subscribe on telegram', reward: 50 },
     { id: 2, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 3, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 4, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 5, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 6, type: 'Manual verification', description: 'Verify your email', reward: 50 },
-    { id: 7, type: 'Manual verification', description: 'Verify your email', reward: 50 },
+    // Additional tasks...
   ];
 
   const filteredTasks = tasks.filter(task => {
@@ -177,9 +185,8 @@ function Home() {
           <div className='nae'>
             <span className='nameava'>
               <span className='imgheader'>
-              <Link to='/stylesy'><img src={avatar} alt='Avatar' /></Link>
+                <Link to='/stylesy'><img src={avatar} alt='Avatar' /></Link>
                 <p>{username}</p>
-                
               </span>
               <span className='frenhead'>
                 <p>5 friends</p>
@@ -192,7 +199,7 @@ function Home() {
                     {maskWallet(userFriendlyAddress)}<img src={wltlogo} alt=''/>
                   </button>
                   <div className='coins'>
-                    <p>1 000 000 coins</p>
+                    <p>{balance.toLocaleString()} coins</p>
                   </div>
                 </div>
               ) : (
@@ -201,7 +208,7 @@ function Home() {
                     Connect wallet
                   </button>
                   <div className='coins'>
-                    <p>1 000 000 coins</p>
+                    <p>{balance.toLocaleString()} coins</p>
                   </div>
                 </div>
               )}
@@ -269,14 +276,18 @@ function Home() {
                   <p className='tsk'>{task.description}</p>
                 </div>
                 <div className='valuetask'>
-                 
-                  <button className='claimbtn' onClick={() => handleClaimClick(`${task.description} - ${task.reward} coins`)}><p>{task.reward} to claim</p></button>
+                  <button 
+                    className={`claimbtn ${completedTasks.includes(task.id) ? 'inactive' : ''}`} 
+                    onClick={() => handleClaimClick(task.id, task.reward)}
+                    disabled={completedTasks.includes(task.id)}
+                  >
+                    <p>{completedTasks.includes(task.id) ? 'Claimed' : `${task.reward} to claim`}</p>
+                  </button>
                 </div>
               </div>
             ))}
           </animated.div>
 
-          {/* Blur overlay */}
           <div className={`blur-overlay ${showModal || walletModalVisible || profileEditModalVisible ? 'show' : 'show'}`} />
 
         </div>
