@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# JettonApp Setup Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Оглавление
 
-## Available Scripts
+1. [Клонирование репозиториев](#1-клонирование-репозиториев)
+2. [Установка зависимостей](#2-установка-зависимостей)
+3. [Запуск приложений](#3-запуск-приложений)
+4. [Настройка Nginx](#4-настройка-nginx)
+5. [Запуск бота](#5-запуск-бота)
 
-In the project directory, you can run:
+## 1. Клонирование репозиториев
 
-### `npm start`
+### Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Клонируйте репозиторий с backend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone <URL_РЕПОЗИТОРИЯ_С_БЭКОМ>
+cd <ПАПКА_РЕПОЗИТОРИЯ_С_БЭКОМ>
+```
 
-### `npm test`
+### Frontend
+Клонируйте репозиторий с frontend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <URL_РЕПОЗИТОРИЯ_С_ФРОНТОМ>
+cd <ПАПКА_РЕПОЗИТОРИЯ_С_ФРОНТОМ>
+```
+## 2. Установка зависимостей
+### Backend
+Перейдите в папку с клонированным репозиторием backend и выполните команду для установки зависимостей:
 
-### `npm run build`
+```bash
+npm install
+```
+### Frontend
+Перейдите в папку с клонированным репозиторием frontend и выполните команду для установки зависимостей:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
+## 3. Запуск приложений
+### Backend
+Запустите backend-приложение с использованием pm2:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+pm2 start index.js --name jetton-backend
+```
+### Frontend
+Для разработки запустите frontend-приложение:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run start
+```
+Для сборки frontend-приложения выполните:
 
-### `npm run eject`
+```bash
+npm run build
+```
+## 4. Настройка Nginx
+### Backend
+Настройте проксирование запросов на backend через Nginx. Добавьте следующий конфиг в файл настроек Nginx:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```nginx
+server {
+    listen 80;
+    server_name your_domain_or_IP;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    location /api {
+        proxy_pass http://127.0.0.1:5000/api;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+### Frontend
+Настройте раздачу статических файлов, собранных с помощью npm run build, через Nginx. Добавьте следующий конфиг в файл настроек Nginx:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```nginx
+server {
+    listen 80;
+    server_name your_domain_or_IP;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    location / {
+        root /var/www/html/build;
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+## 5. Запуск бота
+Перейдите в папку с backend-репозиторием и запустите бота через pm2:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+pm2 start bot.js --name jetton-bot
+```
+После выполнения всех шагов ваше приложение будет готово к использованию!
